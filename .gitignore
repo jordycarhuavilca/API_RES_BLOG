@@ -1,10 +1,9 @@
 node_modules/
-config.js
+config/
 .env
 .gitignore
 .dockerignore
 README.md
-config/
 public/uploads/*.jpg
 public/uploads/*.png
 public/uploads/*.gif
