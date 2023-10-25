@@ -1,8 +1,10 @@
 version: "3.8"
 services:
-  my-app:
-    container_name: express-container-1
-    build: .
+  nodejs-container:
+    container_name: server-blog
+    build: 
+      context: .
+      dockerfile: ./dockerfile
     ports:
       - "3000:3000"
     networks:
@@ -10,17 +12,21 @@ services:
     environment:
       - NODE_OPTIONS=--max_old_space_size=8000
     env_file: .env
+    volumes:
+      - .:/usr/src/app
   mysql-container:
-    container_name: mysql-container-1
+    container_name: container-db-blog
     image: mysql:8.1.0
     ports:
-      - 20057:3306
+      - 3306:20057
     networks:
       - blog-network
+    environment:
+      MSQL_OPTS: --skip-host-cache
     env_file: .env
     volumes:
-      - mysql-data:/var/lib/mysql
+      - Blog-data:/var/lib/mysql
 volumes:
-  mysql-data:
+  Blog-data:
 networks:
   blog-network:

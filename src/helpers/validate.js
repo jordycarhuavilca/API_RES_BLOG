@@ -1,14 +1,18 @@
 const validator = require("validator");
-const validateArticle = ( tittle, description,iduser) => {
-  console.log(`${tittle}-${description}-${iduser}`)
-  const lengthOkay = validator.isLength(tittle, { min: 5, max: undefined });
-  const isEmptyDesc = validator.isEmpty(description);
-  const isEmptyIdUser = validator.isEmpty(iduser)
 
-  if(!lengthOkay || isEmptyDesc || isEmptyIdUser) throw new Error('No se ha validado la informacion !!')
-  
-};
+const isEmpty = (value)=> {
+    
+    if(Array.isArray(value)){
+        for (var v of value) {
+            if(validator.isEmpty(v)) return true
+        }
+       return false
+    }
+    if(validator.isEmpty(value)) return true
+    return false
+}
+module.exports = isEmpty
 
 module.exports = {
-  validateArticle,
+  isEmpty,
 };

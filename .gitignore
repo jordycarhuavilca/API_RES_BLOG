@@ -1,2 +1,12 @@
+node_modules/
 config.js
 .env
+.gitignore
+.dockerignore
+README.md
+config/
+public/uploads/*.jpg
+public/uploads/*.png
+public/uploads/*.gif
+public/uploads/*.jpeg
+

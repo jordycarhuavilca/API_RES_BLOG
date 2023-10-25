@@ -1,0 +1,17 @@
+[
+    {
+        "tittle" : "Learning Java",
+        "description":"Learn Java in a few days",
+        "userId" : 1
+    },
+    {
+        "tittle" : "Learning JavaScript",
+        "description":"Learn JavaScript in 5 hours",
+        "userId": 2
+    },
+    {
+        "tittle" : "Learning Python",
+        "description":"30 days of Python",
+        "userId": 3
+    }
+]

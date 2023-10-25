@@ -1,0 +1,47 @@
+[
+    {
+        "user":"spata445@gmail.com",
+        "nameUser":"jose",
+        "motherLastName":"ortega",
+        "fatherLastName"  :"huaman",
+        "typeUser" : "instructor"
+    },
+    {
+        "user":"Mariacopelo@gmail.com",
+        "nameUser":"Maria",
+        "motherLastName":"copelo",
+        "fatherLastName":"copelo",    
+        "typeUser":"instructor"    
+    },
+    {
+        "user":"donra90@gmail.com",
+        "nameUser":"donra",
+        "motherLastName":"mate" ,
+        "fatherLastName":"diaz",
+        "typeUser":"instructor"       
+    },
+    {
+        "user" : "gad@gmail.com",
+        "nameUser":"jordy",
+        "motherLastName":"Carhuavilca",
+        "fatherLastName":"choque"
+    },
+    {
+        "user" : "gad@gmail.com",
+        "nameUser": "josue",
+        "motherLastName":"gad",
+        "fatherLastName":"mendez"      
+    },
+    {
+        "user" : "ivan@gmail.com",
+        "nameUser":"ivan",
+        "motherLastName":"saypa",
+        "fatherLastName":"reynoso"      
+    },
+    {
+        "user" : "luis@gmail.com",
+        "nameUser":"luis",
+        "motherLastName":"canahuire",
+        "fatherLastName":"advin"      
+    }
+]

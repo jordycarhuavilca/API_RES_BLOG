@@ -1,0 +1,39 @@
+[
+    {
+        "metodo_pago": "credit_card",
+        "pricePaid" : 45.90,
+        "courseId": 1,
+        "userId" : 1
+    },
+    {
+        "metodo_pago": "credit_card",
+        "pricePaid" : 200.00,
+        "courseId": 2,
+        "userId" : 1
+    },
+    {
+        "metodo_pago": "credit_card",
+        "pricePaid" : 45.90,
+        "courseId": 3,
+        "userId" : 1
+    },
+    {
+        "metodo_pago": "debit_card",
+        "pricePaid" : 45.90,
+        "courseId": 1,
+        "userId" : 7
+    },
+    {
+        "metodo_pago": "credit_card",
+        "pricePaid" : 35.99,
+        "courseId": 2,
+        "userId" : 5
+    },
+    {
+        "metodo_pago": "debit_card",
+        "pricePaid" : 50.90,
+        "courseId": 2,
+        "userId" : 4
+    }
+
+]

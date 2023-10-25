@@ -1,0 +1,26 @@
+[
+    {
+       "hours": 12,
+       "numExercise": 12,
+       "articulos": 3,
+       "recursosDescargable" : 1,
+       "certificacion" : true,
+       "courseId":1
+    },
+    {
+       "hours": 7,
+       "numExercise": 5,
+       "articulos": 3,
+       "recursosDescargable" : 2,
+       "certificacion" : true,
+       "courseId":2
+    },
+    {
+       "hours": 10,
+       "numExercise": 8,
+       "articulos": 3,
+       "recursosDescargable" : 7,
+       "certificacion" : true,
+       "courseId":3
+    }
+]
