@@ -1,47 +1,47 @@
 [
     {
+        "userId" : "104937088367858246290",
         "user":"spata445@gmail.com",
         "nameUser":"jose",
-        "motherLastName":"ortega",
-        "fatherLastName"  :"huaman",
+        "family_name":"ortega huaman",
         "typeUser" : "instructor"
     },
     {
+        "userId" : "104937088367858346290",
         "user":"Mariacopelo@gmail.com",
         "nameUser":"Maria",
-        "motherLastName":"copelo",
-        "fatherLastName":"copelo",    
+        "family_name":"copelo copelo",  
         "typeUser":"instructor"    
     },
     {
+        "userId" : "104937088367858446290",
         "user":"donra90@gmail.com",
         "nameUser":"donra",
-        "motherLastName":"mate" ,
-        "fatherLastName":"diaz",
+        "family_name":"mate diaz" ,
         "typeUser":"instructor"       
     },
     {
+        "userId" : "104937088367858546290",
         "user" : "gad@gmail.com",
         "nameUser":"jordy",
-        "motherLastName":"Carhuavilca",
-        "fatherLastName":"choque"
+        "family_name":"Carhuavilca choque"
     },
     {
+        "userId" : "104937088367858646290",
         "user" : "gad@gmail.com",
         "nameUser": "josue",
-        "motherLastName":"gad",
-        "fatherLastName":"mendez"      
+        "family_name":"gad mendez"
     },
     {
+        "userId" : "104937088367858746290",
         "user" : "ivan@gmail.com",
         "nameUser":"ivan",
-        "motherLastName":"saypa",
-        "fatherLastName":"reynoso"      
+        "family_name":"saypa reynoso"   
     },
     {
+        "userId" : "104937088367858946290",
         "user" : "luis@gmail.com",
         "nameUser":"luis",
-        "motherLastName":"canahuire",
-        "fatherLastName":"advin"      
+        "family_name":"canahuire advin"
     }
 ]

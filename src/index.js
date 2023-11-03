@@ -5,21 +5,36 @@ const sequelize = require('./database/DB_connect.js')
 const insertData = require('./insertData.js')
 const {user,comments,courseDetails,courses,purchase,userCourse} = models
 
+const port = new PORT()
+
+async function runServer(){
+  app.listen(port.get(), () => {
+    console.log(`the server is running on the PORT ${port.get()}`);
+  });
+}
+
+app.on('error',(err)=>{
+  if(err.code === 'EADDRINUSE'){
+    port.set(3300)
+    runServer()
+  } else {
+    console.error('An error occurred:', err.message);
+  }
+})
+
 async function startApp() {
   try {
     // Connect to the database
     await sequelize.authenticate()
     console.log("Connected to the database");
-    await sequelize.sync({force : true})
+    await sequelize.sync({alter : true})
     console.log('Tables created successfully')
-    await insertData()
-    console.log('Data was inserted Successfully')
+    // await insertData()
+    // console.log('Data was inserted Successfully')
   } catch (error) {
-    console.error("error in database :", error);
+    console.error("error in database : ", error);
   }
-  app.listen(PORT, () => {
-    console.log(`the server is running on the PORT ${PORT}`);
-  });
+  runServer()
 }
 
 startApp();

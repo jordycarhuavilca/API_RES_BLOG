@@ -6,9 +6,8 @@ const {userState,userType} = require('../../utils/states')
 const user = sequelize.define("user",
   {
     userId: {
-      type:DataTypes.INTEGER,
+      type:DataTypes.STRING,
       primaryKey: true,
-      autoIncrement:true
     },
     user: {
       type: DataTypes.STRING,
@@ -18,10 +17,7 @@ const user = sequelize.define("user",
       type: DataTypes.STRING,
       allowNull: false,
     },
-    fatherLastName : {
-      type: DataTypes.STRING,
-    },
-    motherLastName : {
+    family_name : {
       type: DataTypes.STRING,
     },
     image :{
@@ -34,6 +30,10 @@ const user = sequelize.define("user",
       validate:{
         isIn:[userType] 
        }
+    },
+    refreshToken : {
+      type:DataTypes.STRING,
+      defaultValue: 'no refresh token'
     },
     state:{
       type: DataTypes.STRING,
