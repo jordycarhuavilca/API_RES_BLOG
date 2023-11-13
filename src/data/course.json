@@ -2,16 +2,116 @@
     {
         "tittle" : "Learning Java",
         "description":"Learn Java in a few days",
-        "userId" :"104937088367858246290"
+        "userId" :"104937088367858246290",
+        "image" : "https://img-c.udemycdn.com/course/240x135/3078492_1a27_2.jpg",
+        "categoryId" : 1
     },
+    {
+        "tittle" : "Master en JavaScript: Aprender JS, jQuery, Angular, NodeJS",
+        "description":"Aprende a programar desde cero y desarrollo web con JavaScript, jQuery, JSON, TypeScript, Angular, Node, MEAN, +30 horas",
+        "userId" :"104937088367858246290",
+        "image" : "https://img-b.udemycdn.com/course/240x135/1337000_0d99.jpg",
+        "categoryId" : 1
+    },
+    {
+        "tittle" : "Spring Boot y Angular: Creando aplicaciones cómo Fullstack ",
+        "description":"Spring Boot 3, Api Rest, Keycloak, Docker, JUnit, Mockito, Angular 16, Angular Material, Chartjs, GitFlow, Kanban, GCP., jQuery, JSON, TypeScript, Angular, Node, MEAN, +30 horas",
+        "userId" :"104937088367858246290",
+        "image" : "https://img-b.udemycdn.com/course/240x135/4554978_75ac_5.jpg",
+        "categoryId" : 1
+    },
+    {
+        "tittle" : "Crash Course: Build a Full-Stack Web App in a Weekend!",
+        "description":"A quick, fun, and hands-on introduction to web development. Build a complete app with HTML, CSS, JavaScript, and React!, jQuery, JSON, TypeScript, Angular, Node, MEAN, +30 horas",
+        "userId" :"104937088367858246290",
+        "image" : "https://img-b.udemycdn.com/course/240x135/4993934_0107_4.jpg",
+        "categoryId" : 1
+    },
+
+    {
+        "tittle" : "Ultimate Python: de cero a programador experto",
+        "description":"Conviértete en programador experto viendo desde lo básico hasta lo más avanzado de Python",
+        "userId": "104937088367858346290",
+        "image" : "https://img-c.udemycdn.com/course/240x135/5168292_1584_4.jpg",
+        "categoryId" : 1
+    },
+    {
+        "tittle" : "Excel TOTAL en 30 Días - Excel completo de Cero a Avanzado",
+        "description":"30 proyectos reales, 250 planillas descargables, gráficos, dashboards, macros, VBA, tablas dinámicas y ChatGPT en Excel!",
+        "userId": "104937088367858346290",
+        "image" : "https://img-b.udemycdn.com/course/240x135/2181526_b93d_8.jpg",
+        "categoryId" : 2
+    },
+    {
+        "tittle" : "[NEW] Spring Security 6 Zero to Master along with JWT,OAUTH2",
+        "description":"Spring Security 6 , SpringBoot 3 Security, CORs, CSRF, JWT, OAUTH2, OpenID Connect, KeyCloak",
+        "userId": "104937088367858346290",
+        "image" : "https://img-b.udemycdn.com/course/240x135/3485044_ef54.jpg",
+        "categoryId" : 1
+    },
+    {
+        "tittle" : "Curso Power BI – Análisis de Datos y Business Intelligence",
+        "description":"Curso de Power BI en Español - Datos desde Excel, Dashboards, y DAX en Microsoft Power BI ¡Power BI Desktop es gratis!",
+        "userId": "104937088367858346290",
+        "image" : "https://img-b.udemycdn.com/course/240x135/2178672_c203_3.jpg",
+        "categoryId" : 2
+    },
+
     {
         "tittle" : "Learning JavaScript",
         "description":"Learn JavaScript in 5 hours",
-        "userId": "104937088367858346290"
+        "userId": "104937088367858446290",
+        "image" : "https://img-c.udemycdn.com/course/240x135/4878712_df70_4.jpg",
+        "categoryId" : 1
     },
+    {
+        "tittle" : "Máster en SQL Server: Desde Cero a Nivel Profesional [2023]",
+        "description":"SQL Aprende Bases de Datos, Consultas, Funciones, Tablas y Permisos. Diseña y Programa una Base de Datos Relacional SQL.",
+        "userId": "104937088367858446290",
+        "image" : "https://img-b.udemycdn.com/course/240x135/2069857_a16d_15.jpg",
+        "categoryId" : 1
+    },
+    {
+        "tittle" : "Guía completa MongoDB: Aprende desde Cero hasta Experto",
+        "description":"Experto en MongoDB Server, MongoDB Compass, MongoDB Atlas. Operaciones CRUD, Índices, Framework de Agregación y más!",
+        "userId": "104937088367858446290",
+        "image" : "https://img-b.udemycdn.com/course/240x135/5338104_ff9a_6.jpg",
+        "categoryId" : 1
+    },
+    {
+        "tittle" : "Master en APIs RESTful con NodeJS: Crea 3 backends completos",
+        "description":"Crea APIs REST con Node, MongoDB y Express para una app como Spotify, una red social como Twitter y un blog paso a paso",
+        "userId": "104937088367858446290",
+        "image" : "https://img-b.udemycdn.com/course/750x422/3934850_53c5_2.jpg",
+        "categoryId" : 1
+    },
+
     {
         "tittle" : "Learning Python",
         "description":"30 days of Python",
-        "userId": "104937088367858446290"
+        "userId": "104937088367858446290",
+        "image" : "https://img-c.udemycdn.com/course/240x135/4189168_9704_3.jpg",
+        "categoryId" : 1
+    },
+    {
+        "tittle" : "Master en React: Aprender ReactJS, Hooks, MERN, NodeJS, JWT+",
+        "description":"Aprende React JS con Hooks desde cero y desarrolla aplicaciones web con el MERN Stack (Portafolio, Blog y Red Social)",
+        "userId": "104937088367858446290",
+        "image" : "https://img-b.udemycdn.com/course/240x135/3327890_e871_5.jpg",
+        "categoryId" : 1
+    },
+    {
+        "tittle" : "Curso de HTML5 desde cero: El más completo en Español",
+        "description":"Aprende HTML 5 y crea tus primeras páginas web paso a paso con decenas de ejercicios. Empieza en el desarrollo web aquí",
+        "userId": "104937088367858446290",
+        "image" : "https://img-b.udemycdn.com/course/240x135/2544807_f6c0_2.jpg",
+        "categoryId" : 1
+    },
+    {
+        "tittle" : "Master en Lógica de Programación: Pruebas Técnicas de Código",
+        "description":"Más de 50 ejercicios de programación resueltos y pruebas técnicas explicadas (Comunes en Entrevistas de Desarrollador)",
+        "userId": "104937088367858446290",
+        "image" : "https://img-b.udemycdn.com/course/240x135/2544789_c433_3.jpg",
+        "categoryId" : 1
     }
 ]

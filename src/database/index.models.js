@@ -4,6 +4,7 @@ const purchase = require("./models/purchase");
 const courseDetails = require("./models/courseDetails");
 const comments = require("./models/comments");
 const userCourse = require("./models/userCourse");
+const category = require("./models/category");
 
 //this is when user is intructor
 user.hasMany(courses, { foreignKey: "userId" });
@@ -11,6 +12,9 @@ courses.belongsTo(user, { foreignKey: "userId" });
 
 user.hasMany(purchase, { foreignKey: "userId" });
 purchase.belongsTo(user, { foreignKey: "userId" });
+
+category.hasMany(courses,{foreignKey : "categoryId"})
+courses.hasMany(category,{foreignKey : "categoryId"})
 
 courses.hasMany(purchase, { foreignKey: "courseId" });
 purchase.hasMany(courses, { foreignKey: "courseId" });
@@ -30,8 +34,11 @@ userCourse.belongsTo(user, { foreignKey: 'userId' });
 courses.hasMany(userCourse, { foreignKey: 'courseId' });
 userCourse.belongsTo(courses, { foreignKey: 'courseId' });
 
+
+
 module.exports = {
   user,
+  category,
   courses,
   courseDetails,
   comments,

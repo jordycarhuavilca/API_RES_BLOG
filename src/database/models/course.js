@@ -49,7 +49,4 @@ const course = sequelize.define(
       }
     );
 
-
-
-
-module.exports = course;
+    module.exports = course;

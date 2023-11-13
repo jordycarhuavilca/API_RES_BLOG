@@ -8,12 +8,28 @@
        "courseId":1
     },
     {
+       "hours": 12,
+       "numExercise": 12,
+       "articulos": 3,
+       "recursosDescargable" : 1,
+       "certificacion" : true,
+       "courseId":2
+    },
+    {
+       "hours": 12,
+       "numExercise": 12,
+       "articulos": 3,
+       "recursosDescargable" : 1,
+       "certificacion" : true,
+       "courseId":3
+    },
+    {
        "hours": 7,
        "numExercise": 5,
        "articulos": 3,
        "recursosDescargable" : 2,
        "certificacion" : true,
-       "courseId":2
+       "courseId":4
     },
     {
        "hours": 10,
@@ -21,6 +37,94 @@
        "articulos": 3,
        "recursosDescargable" : 7,
        "certificacion" : true,
-       "courseId":3
+       "courseId":5
+    },
+    {
+       "hours": 10,
+       "numExercise": 8,
+       "articulos": 3,
+       "recursosDescargable" : 7,
+       "certificacion" : true,
+       "courseId":6
+    },
+    {
+       "hours": 10,
+       "numExercise": 8,
+       "articulos": 3,
+       "recursosDescargable" : 7,
+       "certificacion" : true,
+       "courseId":7
+    },
+    {
+       "hours": 10,
+       "numExercise": 8,
+       "articulos": 3,
+       "recursosDescargable" : 7,
+       "certificacion" : true,
+       "courseId":8
+    },
+    {
+       "hours": 10,
+       "numExercise": 8,
+       "articulos": 3,
+       "recursosDescargable" : 7,
+       "certificacion" : true,
+       "courseId":9
+    },
+    {
+       "hours": 10,
+       "numExercise": 8,
+       "articulos": 3,
+       "recursosDescargable" : 7,
+       "certificacion" : true,
+       "courseId":10
+    },
+    {
+       "hours": 10,
+       "numExercise": 8,
+       "articulos": 3,
+       "recursosDescargable" : 7,
+       "certificacion" : true,
+       "courseId":11
+    },
+    {
+       "hours": 10,
+       "numExercise": 8,
+       "articulos": 3,
+       "recursosDescargable" : 7,
+       "certificacion" : true,
+       "courseId":12
+    },
+    {
+       "hours": 10,
+       "numExercise": 8,
+       "articulos": 3,
+       "recursosDescargable" : 7,
+       "certificacion" : true,
+       "courseId":13
+    },
+    {
+       "hours": 10,
+       "numExercise": 8,
+       "articulos": 3,
+       "recursosDescargable" : 7,
+       "certificacion" : true,
+       "courseId":14
+    },
+    {
+       "hours": 10,
+       "numExercise": 8,
+       "articulos": 3,
+       "recursosDescargable" : 7,
+       "certificacion" : true,
+       "courseId":15
+    },
+    {
+       "hours": 10,
+       "numExercise": 8,
+       "articulos": 3,
+       "recursosDescargable" : 7,
+       "certificacion" : true,
+       "courseId":16
     }
 ]

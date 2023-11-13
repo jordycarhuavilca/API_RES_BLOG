@@ -19,6 +19,7 @@ const insertData = async (pathWay, model, nameModel) => {
 const insert = async () => {
   const listNameData = [
     "user",
+    "category",
     "course",
     "courseDetails",
     "comments",
@@ -26,10 +27,11 @@ const insert = async () => {
     "userCourse"
   ];
   let index = 0;
-  const { comments, courseDetails, courses, purchase, user,userCourse } = listModels;
+  const { comments,category, courseDetails, courses, purchase, user,userCourse } = listModels;
 
   const orderModels = {
     user : user,
+    category : category,
     course : courses,
     courseDetail : courseDetails,
     commnent : comments,
