@@ -29,8 +29,8 @@ class user_service {
       return sendResponse(constant.success, selectedData);
     }
   }
-  async getUserCourses(userId) {
-    const data = await this.user.getUserCourses(userId);
+  async myCourses(userId) {
+    const data = await this.user.myCourses(userId);
     if (!data || data.length == 0) return constant.recordNotFound;
     return sendResponse(constant.success, data);
   }

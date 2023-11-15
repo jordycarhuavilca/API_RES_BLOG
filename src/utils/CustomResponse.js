@@ -8,13 +8,12 @@ function sendResponse({ statusCode, message }, data) {
 }
 function response(response,res){
     const length = Object.values(response).length
-
     if(length > 2){
         const {message,statusCode,data} = response
         return res.status(statusCode).json({message,data})
     }else{
         const {message,statusCode} = response
-        return res.status(statusCode).json({message,data:{}})
+        return res.status(statusCode).json({message : message,data:{}})
     }
 
 }

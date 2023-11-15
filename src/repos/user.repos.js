@@ -26,8 +26,8 @@ class userRepos {
       },
     });
   }
-  async getUserCourses(userId) {
-    return userCourse.findAll({
+  async myCourses(userId) {
+    return await userCourse.findAll({
       where: {
         userId: userId,
       },

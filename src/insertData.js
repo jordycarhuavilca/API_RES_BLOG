@@ -24,10 +24,11 @@ const insert = async () => {
     "courseDetails",
     "comments",
     "purchase",
+    "purchaseDetail",
     "userCourse"
   ];
   let index = 0;
-  const { comments,category, courseDetails, courses, purchase, user,userCourse } = listModels;
+  const { comments,category, courseDetails, courses, purchase, user,userCourse,purchaseDetail } = listModels;
 
   const orderModels = {
     user : user,
@@ -36,6 +37,7 @@ const insert = async () => {
     courseDetail : courseDetails,
     commnent : comments,
     purchase : purchase,
+    purchaseDetail : purchaseDetail,
     userCourse : userCourse
   };
 

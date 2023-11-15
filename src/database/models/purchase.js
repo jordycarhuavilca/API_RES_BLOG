@@ -9,20 +9,10 @@ const purchase = sequelize.define(
       primaryKey: true,
       autoIncrement: true,
     },
-    metodo_pago: {
-      type: DataTypes.STRING,
-      defaultValue : "credit_card",
-      validate: {
-        isIn: [["credit_card", "debit_card"]],
-      },
-    },
     paidDate: {
       type: DataTypes.DATEONLY,
       defaultValue: DataTypes.NOW,
-    },
-    pricePaid: {
-      type: DataTypes.DECIMAL(18, 2),
-    },
+    }
   },
   { timestamps: false }
 );

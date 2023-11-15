@@ -1,11 +1,17 @@
-const model = require('../database/models/user')
+const userModel = require('../database/models/user')
+const userCourseModel = require('../database/models/userCourse.js')
 const { serverError } = require("../utils/constant.js");
 const { response } = require("../utils/CustomResponse.js");
 const { userRepos } = require("../repos/user.repos.js");
 const { user_service } = require("../services/user.service.js");
+const { userCourseRespos } = require("../repos/userCourse.repos.js");
+const { userCourse_Service} = require("../services/userCourse.service.js");
 
-const userRepository = new userRepos(model);
+const userRepository = new userRepos(userModel);
 const userService = new user_service(userRepository);
+
+const userCourseRepository = new userCourseRespos(userCourseModel);
+const userCourseService = new userCourse_Service(userCourseRepository);
 
 const addUser = async (req, res) => {
   try {
@@ -34,9 +40,9 @@ const getIntructorCourses = async (req, res) => {
     return response(serverError, res);
   }
 };
-const getUserCourses = async (req, res) => {
+const myCourses = async (req, res) => {
   try {
-    const data = await userService.getUserCourses(req.params.userId);
+    const data = await userService.myCourses(req.params.userId);
     return response(data, res);
   } catch (error) {
     serverError.message = error;
@@ -75,12 +81,22 @@ const deleteUser = async (req, res) => {
   }
 };
 
+const getUserCourse  =async (req,res) =>{
+  try {
+    const data = await userCourseService.getUserCourse();
+    return response(data, res);
+  } catch (error) {
+    serverError.message = error;
+    return response(serverError, res);
+  } 
+}
 module.exports = {
   addUser,
   getIntructorCourses,
-  getUserCourses,
+  myCourses,
   updateUser,
   updateUserImage,
   deleteUser,
-  getUser
+  getUser,
+  getUserCourse
 };

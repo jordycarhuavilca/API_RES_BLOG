@@ -1,12 +1,14 @@
 
-class userRespos{
+class userCourseRespos{
     constructor(userCourse){
         this.userCourse = userCourse
     }
     async addUserCourse(userCourse,transaction){
-        return await this.userCourse.create(userCourse,{transaction : transaction})
-       
+        return await this.userCourse.bulkCreate(userCourse,{transaction : transaction})
+    }
+    async getUserCourse(){
+        return await this.userCourse.findAll()
     }
 }
 
-module.exports = {userRespos}
+module.exports = {userCourseRespos}
