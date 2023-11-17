@@ -24,6 +24,13 @@ const course = sequelize.define(
           type:DataTypes.STRING,
           defaultValue:"default.png"
         },
+        precio : {
+          type : DataTypes.DECIMAL(10, 2)
+        },
+        oferta : {
+          type : DataTypes.DECIMAL(10, 2),
+          defaultValue : 0.00
+        },
         createdAt: {
           type: DataTypes.DATE,
           defaultValue: DataTypes.NOW,

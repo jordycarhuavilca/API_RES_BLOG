@@ -6,6 +6,7 @@ class userCourse_Service {
     this.userCourse = userCourse;
   }
   async addUserCourse(userCourse,transaction) {
+    if (typeof userCourse !== 'object') throw Error("it's not an object")
     const data = await this.userCourse.addUserCourse(userCourse,transaction);
     return sendResponse(constant.reqCreated, data);
   }

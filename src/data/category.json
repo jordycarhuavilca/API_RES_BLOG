@@ -1,8 +1,12 @@
 [
     {
-    "description" : "Informática y software"
+    "description" : "Desarrollo"
     },
     {
     "description" : "Productividad en la oficina"
+    }
+    ,
+    {
+    "description" : "Informática y software "
     }
 ]

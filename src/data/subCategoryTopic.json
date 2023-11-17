@@ -1,0 +1,110 @@
+[
+    {
+        "topicId" : 2,
+        "subCategoryId" : 1
+    },
+    {
+        "topicId" : 21,
+        "subCategoryId" : 1
+    },
+    {
+        "topicId" : 22,
+        "subCategoryId" : 1
+    },
+    {
+        "topicId" : 3,
+        "subCategoryId" : 1
+    },
+    {
+        "topicId" : 5,
+        "subCategoryId" : 1
+    },
+    {
+        "topicId" : 7,
+        "subCategoryId" : 1
+    },
+    {
+        "topicId" : 8,
+        "subCategoryId" : 1
+    },
+    {
+        "topicId" : 9,
+        "subCategoryId" : 1
+    },
+    {
+        "topicId" : 4,
+        "subCategoryId" : 2
+    },
+    {
+        "topicId" : 4,
+        "subCategoryId" : 3
+    },
+    {
+        "topicId" : 1,
+        "subCategoryId" : 3
+    }
+    ,
+    {
+        "topicId" : 5,
+        "subCategoryId" : 3
+    }
+    ,
+    {
+        "topicId" : 3,
+        "subCategoryId" : 3
+    },
+    {
+        "topicId" : 6,
+        "subCategoryId" : 3
+    },
+    {
+        "topicId" : 10,
+        "subCategoryId" : 4
+    },
+    {
+        "topicId" : 11,
+        "subCategoryId" : 4
+    },
+    {
+        "topicId" : 12,
+        "subCategoryId" : 4
+    },
+    {
+        "topicId" : 13,
+        "subCategoryId" : 4
+    },
+    {
+        "topicId" : 14,
+        "subCategoryId" : 4
+    },
+    {
+        "topicId" : 15,
+        "subCategoryId" : 4
+    },
+    {
+        "topicId" : 16,
+        "subCategoryId" : 5
+    },
+    {
+        "topicId" : 17,
+        "subCategoryId" : 5
+    }
+    ,
+    {
+        "topicId" : 18,
+        "subCategoryId" : 5
+    }
+    ,
+    {
+        "topicId" : 19,
+        "subCategoryId" : 5
+    },
+    {
+        "topicId" : 20,
+        "subCategoryId" : 5
+    },
+    {
+        "topicId" : 23,
+        "subCategoryId" : 6
+    }
+]

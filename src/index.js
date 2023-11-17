@@ -3,7 +3,6 @@ const { PORT } = require("./config/ServerConfig.js");
 const models = require('./database/index.models.js')
 const sequelize = require('./database/DB_connect.js')
 const insertData = require('./insertData.js')
-const {user,category,comments,courseDetails,courses,purchase,userCourse,purchaseDetail} = models
 
 const port = new PORT()
 

@@ -7,19 +7,13 @@ class course_service {
   constructor(course) {
     this.course = course;
   }
-
+  
   async addCourse(course) {
+    if (typeof course !== 'object') throw Error("it's not an object")
     let validate = isEmpty(Object.values(course));
     if (validate) return constant.reqValidationError;
     const data = await this.course.addCourse(course);
     return sendResponse(constant.reqCreated, data);
-  }
-
-  async getAllCourses() {
-    let data = await this.course.getAllCourses();
-    data = data.filter((obj)=>obj.state != courseState[2] && obj.state != courseState[3])
-    if (!data) return constant.recordNotFound;
-    return sendResponse(constant.success, data);
   }
 
   async getCourse(courseId) {
@@ -27,8 +21,15 @@ class course_service {
     if (!data || data.length == 0) return constant.recordNotFound;
     return sendResponse(constant.success, data);
   }
+  
+  async getCoursesByTopic(topicName) {
+    const data = await this.course.getCoursesByTopic(topicName);
+    if (!data || data.length == 0) return constant.recordNotFound;
+    return sendResponse(constant.success, data);
+  }
 
   async updateCourse(updatedCourse, courseId) {
+    if (typeof updatedCourse !== 'object') throw Error("it's not an object")
     let validate = isEmpty(Object.values(updatedCourse));
     if (validate) return constant.reqValidationError;
     const data = await this.course.updateCourse(updatedCourse, courseId);
@@ -41,6 +42,7 @@ class course_service {
     return sendResponse(constant.success, data);
   }
   async updateCourseImage(image, courseId) {
+    if (typeof image !== 'object') throw Error("it's not an object")
     let validate = isEmpty(Object.values(image));
     if (validate) return constant.reqValidationError;
     const data = await this.course.updateCourseImage(image, courseId);
@@ -49,6 +51,22 @@ class course_service {
   async deleteCourse(courseId) {
     const data = await this.course.deleteCourse(courseId);
     if(data[0]=== 0)return constant.recordNotFound;
+    return sendResponse(constant.success, data);
+  }
+  async buscarCurso(courseName) {
+    let validate = isEmpty(courseName);
+    if (validate) return constant.reqValidationError;
+    const data = await this.course.buscarCurso(courseName);
+    return sendResponse(constant.success,data)
+  }
+  async listCategoryAndSubs(){
+    const data = await this.course.listCategoryAndSubs();
+    if (!data || data.length == 0) return constant.recordNotFound;
+    return sendResponse(constant.success, data);
+  }
+  async getCategoryAndSubs(categoryValue,subCategoryValue){
+    const data = await this.course.getCategoryAndSubs(categoryValue,subCategoryValue);
+    if (!data || data.length == 0) return constant.recordNotFound;
     return sendResponse(constant.success, data);
   }
 }

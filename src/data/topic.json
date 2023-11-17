@@ -1,0 +1,73 @@
+[
+    {
+        "description" : "Java"
+    },
+    {
+        "description" : "Typescript"
+    },
+    {
+        "description" : "javascript"
+    },
+    {
+        "description" : "Python"
+    },
+    {
+        "description" : "React JS"
+    },
+    {
+        "description" : "FrameWork Spring"
+    },
+    {
+        "description" : "Angular"
+    },
+    {
+        "description" : "CSS"
+    },
+    {
+        "description" : "Node.js"
+    },
+    {
+        "description" : "SQL"
+    },
+    {
+        "description" : "SQL Server"
+    },
+    {
+        "description" : "MySQL"
+    },
+    {
+        "description" : "Gestión de base de datos"
+    },
+    {
+        "description" : "MongoDB"
+    },
+    {
+        "description" : "Oracle SQL"
+    },
+    {
+        "description" : "Excel"
+    },
+    {
+        "description" : "Power BI de Microsoft"
+    },
+    {
+        "description" : "Power Point"
+    },
+    {
+        "description" : "Microsoft 365"
+    },
+    {
+        "description" : "Tablas dinámicas"
+    }
+    ,
+    {
+        "description" : "html"
+    }
+    ,
+    {
+        "description" : "Entrevista para un puesto de programador"
+    },
+    {
+        "description" : "Amazon AWS"
+    }
+]

@@ -1,0 +1,26 @@
+[  
+    {
+        "description" : "Desarrollo web",
+        "categoryId" : 1
+    },
+    {
+        "description" : "Ciencias de la información",
+        "categoryId" : 1
+    },
+    {
+        "description" : "Lenguajes de Programación",
+        "categoryId" : 1
+    },
+    {
+        "description" : "Diseño y desarrollo de bases de datos",
+        "categoryId" : 1
+    },
+    {
+        "description" : "Microsoft",
+        "categoryId" : 2
+    },
+    {
+        "description" : "Certificaciones de informática",
+        "categoryId" : 3
+    }
+]

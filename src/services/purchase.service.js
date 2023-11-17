@@ -15,6 +15,7 @@ class purchase_service {
   }
   async addPurchase(purchase,transaction) {
     try {
+      if (typeof purchase !== 'object') throw Error("it's not an object")
       let validate = isEmpty(Object.values(purchase));
       if (validate) return constant.reqValidationError;
       const data = await this.purchase.addPurchase(purchase, transaction);
@@ -26,6 +27,7 @@ class purchase_service {
     }
   }
   async addPurchaseDetail(list,transaction){
+    if (!Array.isArray(list)) throw Error("it's not list")
     const data = await this.purchase.addPurchaseDetail(list,transaction);
     return sendResponse(constant.reqCreated, data);  
   }

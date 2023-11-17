@@ -4,28 +4,31 @@
         "description":"Learn Java in a few days",
         "userId" :"104937088367858246290",
         "image" : "https://img-c.udemycdn.com/course/240x135/3078492_1a27_2.jpg",
-        "categoryId" : 1
+        "precio" : 249.90,
+        "oferta" : 0.3
     },
     {
         "tittle" : "Master en JavaScript: Aprender JS, jQuery, Angular, NodeJS",
         "description":"Aprende a programar desde cero y desarrollo web con JavaScript, jQuery, JSON, TypeScript, Angular, Node, MEAN, +30 horas",
         "userId" :"104937088367858246290",
         "image" : "https://img-b.udemycdn.com/course/240x135/1337000_0d99.jpg",
-        "categoryId" : 1
+        "precio" : 299.90,
+        "oferta" : 0.3
     },
     {
         "tittle" : "Spring Boot y Angular: Creando aplicaciones cómo Fullstack ",
         "description":"Spring Boot 3, Api Rest, Keycloak, Docker, JUnit, Mockito, Angular 16, Angular Material, Chartjs, GitFlow, Kanban, GCP., jQuery, JSON, TypeScript, Angular, Node, MEAN, +30 horas",
         "userId" :"104937088367858246290",
         "image" : "https://img-b.udemycdn.com/course/240x135/4554978_75ac_5.jpg",
-        "categoryId" : 1
+        "precio" : 149.90
     },
     {
         "tittle" : "Crash Course: Build a Full-Stack Web App in a Weekend!",
         "description":"A quick, fun, and hands-on introduction to web development. Build a complete app with HTML, CSS, JavaScript, and React!, jQuery, JSON, TypeScript, Angular, Node, MEAN, +30 horas",
         "userId" :"104937088367858246290",
         "image" : "https://img-b.udemycdn.com/course/240x135/4993934_0107_4.jpg",
-        "categoryId" : 1
+        "precio" : 299.90,
+        "oferta" : 0.45
     },
 
     {
@@ -33,28 +36,28 @@
         "description":"Conviértete en programador experto viendo desde lo básico hasta lo más avanzado de Python",
         "userId": "104937088367858346290",
         "image" : "https://img-c.udemycdn.com/course/240x135/5168292_1584_4.jpg",
-        "categoryId" : 1
+        "precio" : 299.90
     },
     {
         "tittle" : "Excel TOTAL en 30 Días - Excel completo de Cero a Avanzado",
         "description":"30 proyectos reales, 250 planillas descargables, gráficos, dashboards, macros, VBA, tablas dinámicas y ChatGPT en Excel!",
         "userId": "104937088367858346290",
         "image" : "https://img-b.udemycdn.com/course/240x135/2181526_b93d_8.jpg",
-        "categoryId" : 2
+        "precio" : 59.90
     },
     {
         "tittle" : "[NEW] Spring Security 6 Zero to Master along with JWT,OAUTH2",
         "description":"Spring Security 6 , SpringBoot 3 Security, CORs, CSRF, JWT, OAUTH2, OpenID Connect, KeyCloak",
         "userId": "104937088367858346290",
         "image" : "https://img-b.udemycdn.com/course/240x135/3485044_ef54.jpg",
-        "categoryId" : 1
+        "precio" : 299.90
     },
     {
         "tittle" : "Curso Power BI – Análisis de Datos y Business Intelligence",
         "description":"Curso de Power BI en Español - Datos desde Excel, Dashboards, y DAX en Microsoft Power BI ¡Power BI Desktop es gratis!",
         "userId": "104937088367858346290",
         "image" : "https://img-b.udemycdn.com/course/240x135/2178672_c203_3.jpg",
-        "categoryId" : 2
+        "precio" : 159.90
     },
 
     {
@@ -62,28 +65,28 @@
         "description":"Learn JavaScript in 5 hours",
         "userId": "104937088367858446290",
         "image" : "https://img-c.udemycdn.com/course/240x135/4878712_df70_4.jpg",
-        "categoryId" : 1
+        "precio" : 159.90
     },
     {
         "tittle" : "Máster en SQL Server: Desde Cero a Nivel Profesional [2023]",
         "description":"SQL Aprende Bases de Datos, Consultas, Funciones, Tablas y Permisos. Diseña y Programa una Base de Datos Relacional SQL.",
         "userId": "104937088367858446290",
         "image" : "https://img-b.udemycdn.com/course/240x135/2069857_a16d_15.jpg",
-        "categoryId" : 1
+        "precio" : 299.90
     },
     {
         "tittle" : "Guía completa MongoDB: Aprende desde Cero hasta Experto",
         "description":"Experto en MongoDB Server, MongoDB Compass, MongoDB Atlas. Operaciones CRUD, Índices, Framework de Agregación y más!",
         "userId": "104937088367858446290",
         "image" : "https://img-b.udemycdn.com/course/240x135/5338104_ff9a_6.jpg",
-        "categoryId" : 1
+        "precio" : 299.90
     },
     {
         "tittle" : "Master en APIs RESTful con NodeJS: Crea 3 backends completos",
         "description":"Crea APIs REST con Node, MongoDB y Express para una app como Spotify, una red social como Twitter y un blog paso a paso",
         "userId": "104937088367858446290",
         "image" : "https://img-b.udemycdn.com/course/750x422/3934850_53c5_2.jpg",
-        "categoryId" : 1
+        "precio" : 299.90
     },
 
     {
@@ -91,27 +94,116 @@
         "description":"30 days of Python",
         "userId": "104937088367858446290",
         "image" : "https://img-c.udemycdn.com/course/240x135/4189168_9704_3.jpg",
-        "categoryId" : 1
+        "precio" : 299.90
     },
     {
         "tittle" : "Master en React: Aprender ReactJS, Hooks, MERN, NodeJS, JWT+",
         "description":"Aprende React JS con Hooks desde cero y desarrolla aplicaciones web con el MERN Stack (Portafolio, Blog y Red Social)",
         "userId": "104937088367858446290",
         "image" : "https://img-b.udemycdn.com/course/240x135/3327890_e871_5.jpg",
-        "categoryId" : 1
+        "precio" : 299.90
     },
     {
         "tittle" : "Curso de HTML5 desde cero: El más completo en Español",
         "description":"Aprende HTML 5 y crea tus primeras páginas web paso a paso con decenas de ejercicios. Empieza en el desarrollo web aquí",
         "userId": "104937088367858446290",
         "image" : "https://img-b.udemycdn.com/course/240x135/2544807_f6c0_2.jpg",
-        "categoryId" : 1
+        "precio" : 149.90
     },
+
     {
         "tittle" : "Master en Lógica de Programación: Pruebas Técnicas de Código",
         "description":"Más de 50 ejercicios de programación resueltos y pruebas técnicas explicadas (Comunes en Entrevistas de Desarrollador)",
         "userId": "104937088367858446290",
         "image" : "https://img-b.udemycdn.com/course/240x135/2544789_c433_3.jpg",
-        "categoryId" : 1
+        "precio" : 299.90
+    },
+
+    
+    {
+        "tittle" : "Java: Curso profesional de Java 2023 –De cero a Master",
+        "description":"Aprende a programar en Java desde cero hasta avanzado como Java SE, Java EE y Sprint Boot con JDK 17, JDK 11 y JDK 8.",
+        "userId" :"104937088367858446291",
+        "image" : "https://img-b.udemycdn.com/course/240x135/3582345_c635_6.jpg",
+        "precio" : 299.90
+    },
+    {
+        "tittle" : "Spring Framework & Spring Boot desde cero a experto",
+        "description":"Construye aplicaciones web con Spring Framework & Spring Boot: Thymeleaf, JPA, Security, REST, MySQL, Angular, WebFlux",
+        "userId" :"104937088367858446291",
+        "image" : "https://img-b.udemycdn.com/course/750x422/1388250_e9ac_6.jpg",
+        "precio" : 299.90
+    },
+    {
+        "tittle" : "Programación en Java",
+        "description":"Aprende desde cero hasta nivel experto uno de los lenguajes más universales",
+        "userId" :"104937088367858446292",
+        "image" : "https://img-b.udemycdn.com/course/240x135/3875746_161e.jpg",
+        "precio" : 299.90
+    },
+    {
+        "tittle" : "Domina Microsoft Word 2019: De cero a experto",
+        "description":"Domina el procesador de textos más conocido del mundo: Microsoft Word. Veremos Word 2019 en Microsoft Office 365",
+        "userId" :"104937088367858446292",
+        "image" : "https://img-b.udemycdn.com/course/240x135/3145366_1ec0_2.jpg",
+        "precio" : 59.90
+    },
+    {
+        "tittle" : "Curso Completo Microsoft Forms - Microsoft Office 365",
+        "description":"Crea formularios y cuestionarios con Microsoft Forms. Recibe y analiza datos en tiempo real en cualquier dispositivo",
+        "userId" :"104937088367858446293",
+        "image" : "https://img-b.udemycdn.com/course/240x135/4670544_dd35_2.jpg",
+        "precio" : 149.90
+    },
+
+    {
+        "tittle" : "[Español] AWS Certified Cloud Practitioner (CLF-C02) - 2023",
+        "description":"Aprende Cloud Computing | Prepárate para el examen de AWS Certified Cloud Practitioner | ¡Examen de simulación incluido!",
+        "userId" :"104937088367858446293",
+        "image" : "https://img-b.udemycdn.com/course/240x135/4783354_4d9d_8.jpg",
+        "precio" : 299.90
+    },
+    {
+        "tittle" : "Amazon AWS al completo",
+        "description":"Aprende a trabajar con la infraestructura de Amazon AWS en Cloud. Prepara varias certificaciones. Muy práctico y desde 0",
+        "userId" :"104937088367858446294",
+        "image" : "https://img-b.udemycdn.com/course/750x422/4460912_670d.jpg",
+        "precio" : 299.90
+    },
+    {
+        "tittle" : "Certificación AWS Cloud Practitioner en Español (2023)",
+        "description":"Aprende CLOUD COMPUTING en AWS · Consigue la certificación CLF-C01 de forma rápida y sencilla · Para SysAdmin y DevOps",
+        "userId" :"104937088367858446295",
+        "image" : "https://img-b.udemycdn.com/course/240x135/5251054_2fbf.jpg",
+        "precio" : 299.90
+
+    },
+    {
+        "tittle" : "AWS Curso Básico para desarrolladores web.",
+        "description":"Finalizamos con despliegue continuo (CI/CD). Aprende arquitectura e infraestructura de aws en la nube desde cero.",
+        "userId" :"104937088367858446296",
+        "image" : "https://img-b.udemycdn.com/course/240x135/4520168_3c91.jpg",
+        "precio" : 299.90
+
+    },
+
+
+
+
+
+
+    {
+        "tittle" : "TypeScript sin fronteras: guía definitiva",
+        "description":"Todo lo que necesitas saber de TypeScript en un solo lugar",
+        "userId" :"104937088367858446297",
+        "image" : "https://img-b.udemycdn.com/course/240x135/4873276_7a37_3.jpg",
+        "precio" : 299.90
+    },
+    {
+        "tittle" : "TypeScript: Tu completa guía y manual de mano.",
+        "description":"La base sólida que necesitas para trabajar con TypeScript",
+        "userId" :"104937088367858446296",
+        "image" : "https://img-b.udemycdn.com/course/240x135/1033544_f921_5.jpg",
+        "precio" : 299.90
     }
 ]

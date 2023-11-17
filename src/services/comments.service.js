@@ -6,6 +6,7 @@ class comment_Service {
     this.comment = comment;
   }
   async addComment(comment) {
+    if (typeof comment !== 'object') throw Error("it's not an object")
     let validate = isEmpty(Object.values(comment));
     try {
       //si courseId o userId no existe, entonces lanzara un error 
@@ -24,6 +25,7 @@ class comment_Service {
     return sendResponse(constant.success, data);
   }
   async updateComment(comment, commentId) {
+    if (typeof comment !== 'object') throw Error("it's not an object")
     let validate = isEmpty(Object.values(comment));
     if (validate) return sendResponse(constant.reqValidationError);
     const data = await this.comment.updateComment(comment, commentId);

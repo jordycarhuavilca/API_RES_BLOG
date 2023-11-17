@@ -8,6 +8,7 @@ class user_service {
     this.user = user;
   }
   async addUser(user) {
+    if (typeof user !== 'object') throw Error("it's not an object")
     let validate = isEmpty(Object.values(user));
     if (validate) return constant.reqValidationError;
     const data = await this.user.addUser(user);
@@ -35,12 +36,14 @@ class user_service {
     return sendResponse(constant.success, data);
   }
   async updateUser(updatedUser, userId) {
+    if (typeof updatedUser !== 'object') throw Error("it's not an object")
     let validate = isEmpty(Object.values(updatedUser));
     if (validate) return constant.reqValidationError;
     const data = await this.user.updateUser(updatedUser, userId);
     return sendResponse(constant.success, data);
   }
   async updateUserImage(image, userId) {
+    if (typeof image !== 'object') throw Error("it's not an object")
     let validate = isEmpty(Object.values(image));
     if (validate) return constant.reqValidationError;
     const data = await this.user.updateUserImage(image, userId);

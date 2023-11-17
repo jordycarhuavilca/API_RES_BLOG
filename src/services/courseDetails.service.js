@@ -7,6 +7,7 @@ class courseDetails_service {
     this.courseDetails = courseDetails;
   }
   async addCourseDetails(courseDetails) {
+    if (typeof courseDetails !== 'object') throw Error("it's not an object")
     let validate = isEmpty(Object.values(courseDetails));
     if (validate) return constant.reqValidationError;
     const data = await this.courseDetails.addCourseDetails(courseDetails);
@@ -18,6 +19,7 @@ class courseDetails_service {
     return sendResponse(constant.success, data);
   }
   async updateCourseDetails(updatedCourseDetails, courseId) {
+    if (typeof updatedCourseDetails !== 'object') throw Error("it's not an object")
     let validate = isEmpty(Object.values(updatedCourseDetails));
     if (validate) return constant.reqValidationError;
     const data = await this.courseDetails.updateCourseDetails(

@@ -20,7 +20,11 @@ const insert = async () => {
   const listNameData = [
     "user",
     "category",
+    "subCategory",
+    "topic",
+    "subCategoryTopic",
     "course",
+    "courseTopic",
     "courseDetails",
     "comments",
     "purchase",
@@ -28,17 +32,20 @@ const insert = async () => {
     "userCourse"
   ];
   let index = 0;
-  const { comments,category, courseDetails, courses, purchase, user,userCourse,purchaseDetail } = listModels;
 
   const orderModels = {
-    user : user,
-    category : category,
-    course : courses,
-    courseDetail : courseDetails,
-    commnent : comments,
-    purchase : purchase,
-    purchaseDetail : purchaseDetail,
-    userCourse : userCourse
+    user : listModels.user,
+    category : listModels.category,
+    subCategory : listModels.subCategory,
+    topic : listModels.topic,
+    subCategory_topic : listModels.subCategory_topic,
+    course : listModels.courses,
+    courseTopic : listModels.courseTopic,
+    courseDetail : listModels.courseDetails,
+    commnent : listModels.comments,
+    purchase : listModels.purchase,
+    purchaseDetail : listModels.purchaseDetail,
+    userCourse : listModels.userCourse
   };
 
   for (let key in orderModels) {

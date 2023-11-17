@@ -16,24 +16,11 @@ const addCourse = async (req, res) => {
     return response(serverError,res);
   }
 };
-const getAllCourses = async (req, res) => {
-  try {
-    const data = await courseService.getAllCourses();
-    return response(data, res);
-  } catch (error) { 
-    console.log(error)
-    return response(serverError,res);
-  }
-};
 
 const getCourse = async (req, res) => {
   try {
-    console.log('getting totalStudents')
     const totalStudents = await courseService.getTotalStudents();
-    console.log('total : ' + totalStudents)
-    console.log('getting course')
     const data = await courseService.getCourse(req.params.courseId);
-    console.log('course : ' + data)
     data.totalStudents = totalStudents
     return response(data, res);
   } catch (error) {
@@ -77,11 +64,53 @@ const deleteCourse = async (req, res) => {
     return response(serverError,res);
   }
 };
+
+const buscarCurso = async (req, res) => {
+  try {
+    const data = await courseService.buscarCurso(req.query.q);
+    return response(data, res);
+  } catch (error) {
+    console.log(error)
+    return response(serverError,res);
+  }
+};
+const listCategoryAndSubs = async (req, res) => {
+  try {
+    const data = await courseService.listCategoryAndSubs();
+    return response(data, res);
+  } catch (error) {
+    console.log(error)
+    return response(serverError,res);
+  }
+};
+const getCategoryAndSubs = async (req, res) => {
+  try {
+    const category = req.params.category
+    const subCategory = req.params.subCategory
+    const data = await courseService.getCategoryAndSubs(category,subCategory);
+    return response(data, res);
+  } catch (error) {
+    console.log(error)
+    return response(serverError,res);
+  }
+};
+const getCoursesByTopic = async (req,res) =>{
+  try {
+    const data = await courseService.getCoursesByTopic(req.params.topicName);
+    return response(data, res);
+  } catch (error) {
+    console.log(error)
+    return response(serverError,res);
+  }
+}
 module.exports = {
   addCourse,
-  getAllCourses,
   getCourse,
   updateCourse,
   deleteCourse,
   updateCourseImage,
+  buscarCurso,
+  listCategoryAndSubs,
+  getCategoryAndSubs,
+  getCoursesByTopic
 };
