@@ -9,10 +9,24 @@ const category = require("./models/category");
 const subCategory = require("./models/subCategory");
 const subCategory_topic = require("./models/subCategory_topic");
 const topic = require("./models/topic");
+const carrito = require("./models/carrito");
+const favoritesCourse = require("./models/favoritesCourse");
 
 //this is when user is intructor
 user.hasMany(courses, { foreignKey: "userId" });
 courses.belongsTo(user, { foreignKey: "userId" });
+
+user.hasMany(carrito,{foreignKey: "userId"})
+carrito.belongsTo(user,{foreignKey: "userId"})
+
+courses.hasMany(carrito,{foreignKey: "courseId"})
+carrito.belongsTo(courses,{foreignKey: "courseId"})
+
+user.hasMany(favoritesCourse,{foreignKey: "userId"})
+favoritesCourse.belongsTo(user,{foreignKey: "userId"})
+
+courses.hasMany(favoritesCourse,{foreignKey: "courseId"})
+favoritesCourse.belongsTo(courses,{foreignKey: "courseId"})
 
 user.hasMany(purchase, { foreignKey: "userId" });
 purchase.belongsTo(user, { foreignKey: "userId" });
@@ -67,4 +81,6 @@ module.exports = {
   purchase,
   userCourse,
   purchaseDetail,
+  carrito,
+  favoritesCourse
 };

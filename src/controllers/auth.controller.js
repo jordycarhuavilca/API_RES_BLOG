@@ -89,7 +89,14 @@ const getToken = async (req, res) => {
       res.cookie("accessToken", tokens.id_token, {
         httpOnly: true,
       });
-      res.redirect(303, "http://localhost:5173/");
+      
+      const redirectUrl = new URL("http://localhost:5173/");
+      Object.entries(payload).forEach(([key, value]) => {
+        redirectUrl.searchParams.append(key, value);
+      });
+      res.redirect(303, redirectUrl.toString());
+
+      // res.redirect(303, "http://localhost:5173/");
     } else {
       res.redirect(403, "http://localhost:5173/");
     }

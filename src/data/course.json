@@ -232,5 +232,329 @@
         "image" : "https://img-b.udemycdn.com/course/240x135/1033544_f921_5.jpg",
         "precio" : 299.90,
         "topicId" : 2
+    },
+
+
+    {
+        "tittle" : "Todo sobre Excel - De conocimientos básicos a profesionales",
+        "description": "Aprenderás como pasar de los conceptos básicos de Excel a las funcionalidades más 'pro' como formulas, pivot tables...",
+        "userId" : "104937088367858446298",
+        "image" : "https://img-c.udemycdn.com/course/240x135/26092_8e87_6.jpg",
+        "precio" : 59.90,
+        "topicId" : 16
+    },
+    {
+        "tittle" : "Curso Excel Completo - Desde Principiante a Avanzado",
+        "description": "Curso Completo de Excel, impartido por un Profesional, que cubre desde lo más Básico hasta lo más Avanzado de Excel.",
+        "userId" : "104937088367858446294",
+        "image" : "https://img-c.udemycdn.com/course/240x135/3661014_0b25_7.jpg",
+        "precio" : 249.90,
+        "topicId" : 16
+    },
+    {
+        "tittle" : "Microsoft Excel - Fórmulas y Funciones Avanzadas en Excel",
+        "description": "Domina 75+ fórmulas en Excel con ejercicios prácticos de un maestro experto en Microsoft Excel (Excel '07 - Excel '19)",
+        "userId" : "104937088367858446297",
+        "image" : "https://img-c.udemycdn.com/course/240x135/1981074_a100_4.jpg",
+        "precio" : 299.90,
+        "topicId" : 16
+    },
+
+
+    {
+        "tittle" : "Tablas Dinámicas en Excel - Dashboards y Análisis de Datos",
+        "description": "Domina las Pivot Tables y crea sofisticados Tableros ¡Sin fórmulas y con la herramienta más poderosa de Microsoft Excel!",
+        "userId" : "104937088367858446291",
+        "image" : "https://img-c.udemycdn.com/course/240x135/2872884_a45e_4.jpg",
+        "precio" : 249.90,
+        "topicId" : 16
+    },
+    {
+        "tittle" : "Curso Excel - Fórmulas, tablas dinámicas y dashboards",
+        "description": "Curso de Excel: gráficos, fórmulas y funciones, cuadros de mando, reportes, informes y mucho más",
+        "userId" : "104937088367858446299",
+        "image" : "https://img-c.udemycdn.com/course/240x135/3299112_6e84_4.jpg",
+        "precio" : 299.90,
+        "topicId" : 16
+    },
+    {
+        "tittle" : "EXCEL: Datos, Tablas Dinámicas, Gráficos, Funciones y Más",
+        "description": "Conviértete en un Pro de las Hojas de Cálculo, Domina la Interfaz de Excel, Macros, Análisis y todas las Funciones",
+        "userId" : "104937088367858446301",
+        "image" : "https://img-c.udemycdn.com/course/240x135/5004450_261e_3.jpg",
+        "precio" : 249.90,
+        "topicId" : 16
+    },
+    {
+        "tittle" : "Excel Profesional 2023 – Para Empresas!",
+        "description": "Adquiere Conocimientos Indispensables de Excel en el Mundo Empresarial. ¡El Curso Excel Más Actualizado Este 2023!⭐",
+        "userId" : "104937088367858446300",
+        "image" : "https://img-c.udemycdn.com/course/240x135/3941854_0c26_12.jpg",
+        "precio" : 299.90,
+        "topicId" : 16
+    },
+    {
+        "tittle" : "Excel para el mundo real: Guía desde cero para el trabajo",
+        "description": "Domina las bases de Excel para el mundo laboral",
+        "userId" : "104937088367858446302",
+        "image" : "https://img-c.udemycdn.com/course/240x135/4425922_3e47.jpg",
+        "precio" : 59.90,
+        "topicId" : 16
+    },
+    {
+        "tittle" : "Programación funcional en Java",
+        "description": "Aprende una forma diferente de resolver problemas clásicos, desde otro punto de vista más seguro, legible y simple",
+        "userId" : "104937088367858446303",
+        "image" : "https://img-c.udemycdn.com/course/240x135/3281106_9a64.jpg",
+        "precio" : 299.90,
+        "topicId" : 1
+    },
+    {
+        "tittle" : "Java en acción: Resolución de un caso complejo en Java",
+        "description": "Aprende a usar los recursos de Java y los principios de la orientación a objetos mediante un caso de uso realista.",
+        "userId" : "104937088367858446304",
+        "image" : "https://img-c.udemycdn.com/course/240x135/538556_2a9a_4.jpg",
+        "precio" : 159.90,
+        "topicId" : 1
+    },
+    {
+        "tittle" : "Java a profundidad",
+        "description": "Aprende Java a profundidad desde cero, sin presentaciones aburridas pero con todos los conceptos explicados a detalle.",
+        "userId" : "104937088367858446305",
+        "image" : "https://img-c.udemycdn.com/course/240x135/3803918_5000_3.jpg",
+        "precio" : 299.90,
+        "topicId" : 1
+    },
+    {
+        "tittle" : "IntelliJ IDEA, tips y trucos para mejorar tu productividad",
+        "description": "Aprende a utilizar Intellij IDEA para mejorar tu productividad como desarrollador",
+        "userId" : "104937088367858446305",
+        "image" : "https://img-c.udemycdn.com/course/240x135/5107394_daf1.jpg",
+        "precio" : 199.90,
+        "topicId" : 1
+    },
+    {
+        "tittle" : "Programación orientada a objetos con Java",
+        "description": "El objetivo es que los estudiantes aprendan a desarrollar utilizando la POO de la forma más simple y práctica posible",
+        "userId" : "104937088367858446305",
+        "image" : "https://img-c.udemycdn.com/course/240x135/3296650_2a08_3.jpg",
+        "precio" : 199.90,
+        "topicId" : 1
+    },
+    {
+        "tittle" : "Master en Colecciones y estructuras de datos en Java",
+        "description": "Conviértete en un experto en el manejo de las colecciones en Java y aprueba en todas las entrevistas de trabajo",
+        "userId" : "104937088367858446304",
+        "image" : "https://img-c.udemycdn.com/course/240x135/3329900_3b61_2.jpg",
+        "precio" : 249.90,
+        "topicId" : 1
+    },
+    {
+        "tittle" : "Master Definitivo en Spring Security 6, JWT y OAuth2.0",
+        "description": "Conviertete en un EXPERTO en seguridad informática con Spring Security 6",
+        "userId" : "104937088367858446303",
+        "image" : "https://img-c.udemycdn.com/course/240x135/5534508_36e2.jpg",
+        "precio" : 199.90,
+        "topicId" : 1
+    },
+    {
+        "tittle" : "TypeScript sin fronteras: guía definitiva",
+        "description":"Todo lo que necesitas saber de TypeScript en un solo lugar",
+        "userId" :"104937088367858446297",
+        "image" : "https://img-b.udemycdn.com/course/240x135/4873276_7a37_3.jpg",
+        "precio" : 299.90,
+        "topicId" : 2
+    },
+    {
+        "tittle" : "TypeScript: Tu completa guía y manual de mano.",
+        "description":"La base sólida que necesitas para trabajar con TypeScript",
+        "userId" :"104937088367858446296",
+        "image" : "https://img-b.udemycdn.com/course/240x135/1033544_f921_5.jpg",
+        "precio" : 299.90,
+        "topicId" : 2
+    },
+    {
+        "tittle" : "Máster en Typescript: Desde Cero a Nivel Profesional",
+        "description": "Guía completa de typescript construyendo proyectos y utilizando técnicas de código limpio. Incluye React y Express",
+        "userId" : "104937088367858446302",
+        "image" : "https://img-c.udemycdn.com/course/240x135/3148216_5bb9.jpg",
+        "precio" : 144.90,
+        "topicId" : 2
+    },
+    {
+        "tittle" : "TypeScript: Aprende y mejora tu código",
+        "description": "Aprende TypeScript de cero a experto para trabajar con proyectos reales.",
+        "userId" : "104937088367858446302",
+        "image" : "https://img-c.udemycdn.com/course/240x135/4437050_7123_4.jpg",
+        "precio" : 152.90,
+        "topicId" : 2
+    },
+    {
+        "tittle" : "Understanding TypeScript",
+        "description": "Boost your JavaScript projects with TypeScript: Learn all about core types, generics, TypeScript + React or Node & more!",
+        "userId" : "104937088367858446303",
+        "image" : "https://img-c.udemycdn.com/course/240x135/947098_02ec_2.jpg",
+        "precio" : 249.90,
+        "topicId" : 2
+    },
+    {
+        "tittle" : "Mastering TypeScript - 2023 Edition",
+        "description": "Learn the world's fastest growing programming language from scratch. Includes Webpack & React!",
+        "userId" : "104937088367858446303",
+        "image" : "https://img-c.udemycdn.com/course/240x135/4724938_ab3d_3.jpg",
+        "precio" : 299.90,
+        "topicId" : 2
+    },
+    {
+        "tittle" : "Curso Completo de Typescript. Desde las Bases a la Practica.",
+        "description": "Todo lo que necesitas saber sobre TypeScript para Dominar el Lenguaje. Desde 0 hasta la Practica con TypeScript.",
+        "userId" : "104937088367858446303",
+        "image" : "https://img-c.udemycdn.com/course/240x135/4314712_d2fb_4.jpg",
+        "precio" : 59.90,
+        "topicId" : 2
+    },
+    {
+        "tittle" : "TypeScript Complete Course - Beginner To Advanced + Project",
+        "description": "Learn TypeScript in-depth and also build a full-stack app using TypeScript with React, Material UI, Node and TypeORM.",
+        "userId" : "104937088367858446301",
+        "image" : "https://img-c.udemycdn.com/course/240x135/4418914_9e62_5.jpg",
+        "precio" : 249.90,
+        "topicId" : 2
+    },
+    {
+        "tittle" : "TypeScript for Professionals - 2023 Edition",
+        "description": "Learn all about the TypeScript type system - taught by a Microsoft MVP",
+        "userId" : "104937088367858446301",
+        "image" : "https://img-c.udemycdn.com/course/240x135/3387966_7b82_2.jpg",
+        "precio" : 149.90,
+        "topicId" : 2
+    },
+    {
+        "tittle" : "Python Practicando. Desde 0 hasta Desarrollador en Python",
+        "description": "Aprende Python, donde iniciamos desde 0, sin conocimientos previos hasta desarrollar aplicaciones con mucha practica!",
+        "userId" : "104937088367858446305",
+        "image" : "https://img-c.udemycdn.com/course/240x135/2297910_788e_2.jpg",
+        "precio" : 249.90,
+        "topicId" : 4
+    },
+    {
+        "tittle" : "Curso completo de Python 2023-De cero a Master con Python 3",
+        "description": "Desarrollo web con Python3, Flask, Django y conoce todo desde cero SQLite3, HTML, CSS para crear aplicaciones WEB",
+        "userId" : "104937088367858446305",
+        "image" : "https://img-c.udemycdn.com/course/240x135/2150756_4220_12.jpg",
+        "precio" : 299.90,
+        "topicId" : 4
+    },
+    {
+        "tittle" : "Machine Learning y Data Science: Curso Completo con Python",
+        "description": "Aprende Machine Learning y Data Science con Python, ¡conviértete en un experto en Machine Learning con Python!",
+        "userId" : "104937088367858446305",
+        "image" : "https://img-c.udemycdn.com/course/240x135/2722404_d971_10.jpg",
+        "precio" : 299.90,
+        "topicId" : 4
+    },
+    {
+        "tittle" : "Python para el análisis de datos",
+        "description": "Domina el poder de la ciencia de datos en Python. El curso perfecto para principiantes sin experiencia en programación.",
+        "userId" : "104937088367858446303",
+        "image" : "https://img-c.udemycdn.com/course/240x135/5179988_3f10_9.jpg",
+        "precio" : 249.90,
+        "topicId" : 4
+    },
+    {
+        "tittle" : "Inteligencia Artificial y Deep Learning desde cero en Python",
+        "description": "Aprende Inteligencia Artificial y Deep Learning con Python, Tensorflow y Keras, conviértete en experto en Deep Learning.",
+        "userId" : "104937088367858446303",
+        "image" : "https://img-c.udemycdn.com/course/240x135/3683272_d0e2_8.jpg",
+        "precio" : 299.90,
+        "topicId" : 4
+    },
+    {
+        "tittle" : "Python 2023. Curso de python con 150 ejemplos y 10 proyectos",
+        "description": "Aprende Python 3 desde cero. Curso de Python 3 muy práctico, con más de 100 ejemplo, 50 ejercicios y 10 proyectos",
+        "userId" : "104937088367858446303",
+        "image" : "https://img-c.udemycdn.com/course/240x135/2165550_3848_8.jpg",
+        "precio" : 299.90,
+        "topicId" : 4
+    },
+    {
+        "tittle" : "Maestría en CSS3: Flexbox, Grid, SASS, Bootstrap 5",
+        "description": "Aprende desde cero a un nivel profesional el lenguaje CSS3 con Flexbox, Grid, Responsive Design, SASS, Bootstrap 5",
+        "userId" : "104937088367858446298",
+        "image" : "https://img-c.udemycdn.com/course/240x135/4504702_9b50_4.jpg",
+        "precio" : 249.90,
+        "topicId" : 8
+    },
+    {
+        "tittle" : "Master en programación fullstack JavaScript Angular Node",
+        "description": "Bootcamp completo HMTL5, CSS, JQuery, JavaScript, TypeScript, Angular, Node, desde cero a nivel experto",
+        "userId" : "104937088367858446298",
+        "image" : "https://img-c.udemycdn.com/course/240x135/4371056_5f97.jpg",
+        "precio" : 299.90,
+        "topicId" : 7
+    },
+    {
+        "tittle" : "Master en CSS: Responsive, SASS, Flexbox, Grid y Bootstrap",
+        "description": "Aprende CSS3, Maquetación web, Responsive Web Design, SASS, LESS, Flexbox, CSS Grid, Bootstrap 4 y 5 desde cero +20h",
+        "userId" : "104937088367858446299",
+        "image" : "https://img-c.udemycdn.com/course/240x135/2060911_d987.jpg",
+        "precio" : 299.90,
+        "topicId" : 8
+    },
+    {
+        "tittle" : "Curso de Bootstrap 5: Incluye HTML, CSS, Sass, JS y más!",
+        "description": "Aprende a desarrollar páginas web responsives (mobile first) c/ HTML, CSS, Flexbox, Sass, Bootstrap 5, Git y Github Page",
+        "userId" : "104937088367858446299",
+        "image" : "https://img-c.udemycdn.com/course/240x135/3783506_6a24_2.jpg",
+        "precio" : 299.90,
+        "topicId" : 8
+    },
+    {
+        "tittle" : "Aprende Javascript ES9, HTML, CSS3 y NodeJS desde cero",
+        "description": "Aprende a programar con javascript sin conocimiento previo en el explorador web y en el servidor con nodeJS",
+        "userId" : "104937088367858446299",
+        "image" : "https://img-c.udemycdn.com/course/240x135/2516170_d229_2.jpg",
+        "precio" : 249.90,
+        "topicId" : 9
+    },
+    {
+        "tittle" : "Aprende Javascript ES9, HTML, CSS3 y NodeJS desde cero",
+        "description": "Aprende a programar con javascript sin conocimiento previo en el explorador web y en el servidor con nodeJS",
+        "userId" : "104937088367858446299",
+        "image" : "https://img-c.udemycdn.com/course/240x135/2516170_d229_2.jpg",
+        "precio" : 249.90,
+        "topicId" : 9
+    },
+    {
+        "tittle" : "Programación y Desarrollo Front-end y Back-end desde cero",
+        "description": "Aprende programación y desarrollo web y back-end para principiantes con JavaScript, CSS, HTML, PHP y MySQL 100% práctico",
+        "userId" : "104937088367858446300",
+        "image" : "https://img-c.udemycdn.com/course/240x135/4624792_aba3_10.jpg",
+        "precio" : 299.90,
+        "topicId" : 24
+    },
+    {
+        "tittle" : "Desarrollo web desde cero: HTML5, CSS3, Javascript",
+        "description": "Aprende los lenguajes que dan vida a la web desde cero a un nivel avanzado. Aprenderás HTML5, CSS3, Javascript.",
+        "userId" : "104937088367858446300",
+        "image" : "https://img-c.udemycdn.com/course/240x135/3204602_4ace_2.jpg",
+        "precio" : 299.90,
+        "topicId" : 24
+    },
+    {
+        "tittle" : "Universidad Desarrollo Web - FrontEnd Web Developer!",
+        "description": "El mejor curso para aprender a crear aplicaciones Web Modernas con HTML, CSS y JavaScript. Serás un FrontEnd Developer!",
+        "userId" : "104937088367858446300",
+        "image" : "https://img-c.udemycdn.com/course/240x135/3895716_00dc_9.jpg",
+        "precio" : 299.90,
+        "topicId" : 24
     }
+
+
+
+
+
+
+
+
 ]

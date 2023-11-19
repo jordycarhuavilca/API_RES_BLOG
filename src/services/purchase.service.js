@@ -37,5 +37,40 @@ class purchase_service {
     if (!data) return constant.recordNotFound;
     return sendResponse(constant.success, data);
   }
+
+  async addToCarrito(userIdCourseId) {
+    const data = await this.purchase.addToCarrito(userIdCourseId);
+    if (!data) return constant.recordNotFound;
+    return sendResponse(constant.success, data);
+  }
+
+  async deleteFromCarrito(carritoCod) {
+    const data = await this.purchase.deleteFromCarrito(carritoCod);
+    if (!data) return constant.recordNotFound;
+    return sendResponse(constant.success, data);
+  }
+  async getAllCourseCarrito(userId) {
+    const data = await this.purchase.getAllCourseCarrito(userId);
+    if (!data) return constant.recordNotFound;
+    return sendResponse(constant.success, data);
+  }
+  async addToFavorite(userIdCourseId) {
+    const data = await this.purchase.addToFavorite(userIdCourseId);
+    if (!data) return constant.recordNotFound;
+    return sendResponse(constant.success, data);
+  }
+  async deleteFromFavorite(favoritosId) {
+    const data = await this.purchase.deleteFromFavorite(favoritosId);
+    if (!data) return constant.recordNotFound;
+    return sendResponse(constant.success, data);
+  }
+  async getCourseFavorite(userId) {
+    const data = await this.purchase.getCourseFavorite(userId);
+    if (!data) return constant.recordNotFound;
+    return sendResponse(constant.success, data);
+  }
+
+
+
 }
 module.exports = { purchase_service };

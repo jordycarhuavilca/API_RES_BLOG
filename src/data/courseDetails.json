@@ -214,5 +214,302 @@
        "recursosDescargable" : 7,
        "certificacion" : true,
        "courseId":27
-    }
+   },
+   {
+      "hours": 6,
+      "numExercise": 5,
+      "articulos": 10,
+      "recursosDescargable" : 56,
+      "certificacion" : true,
+      "courseId":28
+   },
+   {
+      "hours": 19.5,
+      "numExercise": 4,
+      "articulos": 9,
+      "recursosDescargable" : 50,
+      "certificacion" : true,
+      "courseId":29
+   },
+   {
+      "hours": 7,
+      "numExercise": 2,
+      "articulos": 3,
+      "recursosDescargable" : 20,
+      "certificacion" : true,
+      "courseId":30
+   },
+
+   {
+      "hours": 3.5,
+      "numExercise": 8,
+      "articulos": 1,
+      "recursosDescargable" : 7,
+      "certificacion" : true,
+      "courseId":31
+   },
+   {
+      "hours": 5,
+      "numExercise": 3,
+      "articulos": 5,
+      "recursosDescargable" : 26,
+      "certificacion" : true,
+      "courseId":32
+   },
+   {
+      "hours": 16,
+      "numExercise": 4,
+      "articulos": 9,
+      "recursosDescargable" : 139,
+      "certificacion" : true,
+      "courseId":33
+   },
+{
+      "hours": 8.5,
+      "numExercise": 2,
+      "articulos": 5,
+      "recursosDescargable" : 20,
+      "certificacion" : true,
+      "courseId":34
+   },
+   {
+      "hours": 4.5,
+      "numExercise": 5,
+      "articulos": 1,
+      "recursosDescargable" : 73,
+      "certificacion" : true,
+      "courseId":35
+   },
+   {
+      "hours": 3.5,
+      "numExercise": 1,
+      "articulos": 3,
+      "recursosDescargable" : 23,
+      "certificacion" : true,
+      "courseId":36
+   },
+   {
+      "hours": 1.5,
+      "numExercise": 1,
+      "articulos": 5,
+      "recursosDescargable" : 4,
+      "certificacion" : true,
+      "courseId":37
+   },
+   {
+      "hours": 15.5,
+      "numExercise": 1,
+      "articulos": 1,
+      "recursosDescargable" : 1,
+      "certificacion" : true,
+      "courseId":38
+   },
+   {
+      "hours": 20,
+      "numExercise": 1,
+      "articulos": 5,
+      "recursosDescargable" : 10,
+      "certificacion" : true,
+      "courseId":39
+   },
+{
+      "hours": 3.5,
+      "numExercise": 0,
+      "articulos": 0,
+      "recursosDescargable" : 0,
+      "certificacion" : true,
+      "courseId":40
+   },
+   {
+      "hours": 5,
+      "numExercise": 1,
+      "articulos": 4,
+      "recursosDescargable" : 14,
+      "certificacion" : true,
+      "courseId":41
+   },
+   {
+      "hours": 8,
+      "numExercise": 0,
+      "articulos": 5,
+      "recursosDescargable" : 0,
+      "certificacion" : true,
+      "courseId":42
+   },
+{
+      "hours": 19.5,
+      "numExercise": 0,
+      "articulos": 3,
+      "recursosDescargable" : 118,
+      "certificacion" : true,
+      "courseId":43
+   },
+   {
+      "hours": 5.5,
+      "numExercise": 0,
+      "articulos": 0,
+      "recursosDescargable" : 0,
+      "certificacion" : true,
+      "courseId":44
+   },
+   {
+      "hours": 8.5,
+      "numExercise": 0,
+      "articulos": 26,
+      "recursosDescargable" : 9,
+      "certificacion" : true,
+      "courseId":45
+   },
+   {
+      "hours": 13.5,
+      "numExercise": 0,
+      "articulos": 1,
+      "recursosDescargable" : 0,
+      "certificacion" : true,
+      "courseId":46
+   },
+   {
+      "hours": 8,
+      "numExercise": 0,
+      "articulos": 1,
+      "recursosDescargable" : 0,
+      "certificacion" : true,
+      "courseId":47
+   },
+   {
+      "hours": 15,
+      "numExercise": 5,
+      "articulos": 22,
+      "recursosDescargable" : 210,
+      "certificacion" : true,
+      "courseId":48
+   },
+   {
+      "hours": 10.5,
+      "numExercise": 0,
+      "articulos": 2,
+      "recursosDescargable" : 0,
+      "certificacion" : true,
+      "courseId":49
+   },
+   {
+      "hours": 8,
+      "numExercise": 0,
+      "articulos": 1,
+      "recursosDescargable" : 0,
+      "certificacion" : true,
+      "courseId":50
+   },
+   {
+      "hours": 21,
+      "numExercise": 0,
+      "articulos": 2,
+      "recursosDescargable" : 198,
+      "certificacion" : true,
+      "courseId":51
+   },
+{
+      "hours": 3.5,
+      "numExercise": 0,
+      "articulos": 0,
+      "recursosDescargable" : 0,
+      "certificacion" : true,
+      "courseId":52
+   },
+   {
+      "hours": 25.5,
+      "numExercise": 0,
+      "articulos": 21,
+      "recursosDescargable" : 148,
+      "certificacion" : true,
+      "courseId":53
+   },
+   {
+      "hours": 37,
+      "numExercise": 0,
+      "articulos": 43,
+      "recursosDescargable" : 16,
+      "certificacion" : true,
+      "courseId":54
+   },
+{
+      "hours": 30.5,
+      "numExercise": 0,
+      "articulos": 7,
+      "recursosDescargable" : 25,
+      "certificacion" : true,
+      "courseId":55
+   },
+   {
+      "hours": 15,
+      "numExercise": 2,
+      "articulos": 5,
+      "recursosDescargable" : 14,
+      "certificacion" : true,
+      "courseId":56
+   },
+   {
+      "hours": 27,
+      "numExercise": 2,
+      "articulos": 2,
+      "recursosDescargable" : 32,
+      "certificacion" : true,
+      "courseId":57
+   },
+{
+      "hours": 16.5,
+      "numExercise": 19,
+      "articulos": 1,
+      "recursosDescargable" : 13,
+      "certificacion" : true,
+      "courseId":58
+   },
+   {
+      "hours": 46,
+      "numExercise": 1,
+      "articulos": 22,
+      "recursosDescargable" : 23,
+      "certificacion" : true,
+      "courseId":59
+   },
+   {
+      "hours": 28.5,
+      "numExercise": 0,
+      "articulos": 44,
+      "recursosDescargable" : 56,
+      "certificacion" : true,
+      "courseId":60
+   },
+   {
+      "hours": 62,
+      "numExercise": 7,
+      "articulos": 66,
+      "recursosDescargable" : 118,
+      "certificacion" : true,
+      "courseId":61
+   },
+   {
+      "hours": 82.5,
+      "numExercise": 0,
+      "articulos": 0,
+      "recursosDescargable" : 79,
+      "certificacion" : true,
+      "courseId":62
+   },
+   {
+      "hours": 39.5,
+      "numExercise": 0,
+      "articulos": 24,
+      "recursosDescargable" : 74,
+      "certificacion" : true,
+      "courseId":63
+   },
+{
+      "hours": 66.5,
+      "numExercise": 0,
+      "articulos": 26,
+      "recursosDescargable" : 14,
+      "certificacion" : true,
+      "courseId":64
+   }
 ]

@@ -52,7 +52,79 @@ const getAllPurchase = async (req,res) =>{
     return response(serverError, res);
   }
 }
+
+
+const addToCarrito = async (req,res) =>{
+  try {
+    const data = await purchaseService.addToCarrito(req.body)
+    return response(data, res);
+  } catch (error) {
+    serverError.message = error;
+    return response(serverError, res);
+  }
+}
+
+const deleteFromCarrito = async (req,res) =>{
+  try {
+    const data = await purchaseService.deleteFromCarrito(req.params.carritoCod)
+    return response(data, res);
+  } catch (error) {
+    serverError.message = error;
+    return response(serverError, res);
+  }
+}
+
+const getAllCourseCarrito = async (req,res) =>{
+  try {
+    const data = await purchaseService.getAllCourseCarrito(req.params.userId)
+    return response(data, res);
+  } catch (error) {
+    serverError.message = error;
+    return response(serverError, res);
+  }
+}
+
+const addToFavorite = async (req,res) =>{
+  try {
+    const data = await purchaseService.addToFavorite(req.body)
+    return response(data, res);
+  } catch (error) {
+    serverError.message = error;
+    return response(serverError, res);
+  }
+}
+const deleteFromFavorite = async (req,res) =>{
+  try {
+    const data = await purchaseService.deleteFromFavorite(req.params.favoritosId)
+    return response(data, res);
+  } catch (error) {
+    serverError.message = error;
+    return response(serverError, res);
+  }
+}
+
+const getCourseFavorite = async (req,res) =>{
+  try {
+    const data = await purchaseService.getCourseFavorite(req.params.userId)
+    return response(data, res);
+  } catch (error) {
+    serverError.message = error;
+    return response(serverError, res);
+  }
+}
+
+
+
+
+
+
 module.exports = {
   addPurchase,
-  getAllPurchase
+  getAllPurchase,
+  addToCarrito,
+  getAllCourseCarrito,
+  addToFavorite,
+  getCourseFavorite,
+  deleteFromCarrito,
+  deleteFromFavorite
 };
