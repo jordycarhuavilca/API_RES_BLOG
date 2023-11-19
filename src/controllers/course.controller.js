@@ -83,11 +83,11 @@ const listCategoryAndSubs = async (req, res) => {
     return response(serverError,res);
   }
 };
-const getCategoryAndSubs = async (req, res) => {
+const getCourseByCateAndSubs = async (req, res) => {
   try {
     const category = req.params.category
     const subCategory = req.params.subCategory
-    const data = await courseService.getCategoryAndSubs(category,subCategory);
+    const data = await courseService.getCourseByCateAndSubs(category,subCategory);
     return response(data, res);
   } catch (error) {
     console.log(error)
@@ -111,6 +111,6 @@ module.exports = {
   updateCourseImage,
   buscarCurso,
   listCategoryAndSubs,
-  getCategoryAndSubs,
+  getCourseByCateAndSubs,
   getCoursesByTopic
 };

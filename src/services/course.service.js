@@ -64,8 +64,8 @@ class course_service {
     if (!data || data.length == 0) return constant.recordNotFound;
     return sendResponse(constant.success, data);
   }
-  async getCategoryAndSubs(categoryValue,subCategoryValue){
-    const data = await this.course.getCategoryAndSubs(categoryValue,subCategoryValue);
+  async getCourseByCateAndSubs(categoryValue,subCategoryValue){
+    const data = await this.course.getCourseByCateAndSubs(categoryValue,subCategoryValue);
     if (!data || data.length == 0) return constant.recordNotFound;
     return sendResponse(constant.success, data);
   }

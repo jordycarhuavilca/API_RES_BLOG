@@ -106,5 +106,17 @@
     {
         "topicId" : 23,
         "subCategoryId" : 6
+    },
+    {
+        "topicId" : 24,
+        "subCategoryId" : 1
+    },
+    {
+        "topicId" : 25,
+        "subCategoryId" : 7
+    },
+    {
+        "topicId" : 26,
+        "subCategoryId" : 5
     }
 ]

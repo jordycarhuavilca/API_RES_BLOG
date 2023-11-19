@@ -5,7 +5,6 @@ const courseDetails = require("./models/courseDetails");
 const comments = require("./models/comments");
 const courses = require("./models/course");
 const userCourse = require("./models/userCourse");
-const courseTopic = require("./models/courseTopic");
 const category = require("./models/category");
 const subCategory = require("./models/subCategory");
 const subCategory_topic = require("./models/subCategory_topic");
@@ -34,12 +33,9 @@ subCategory_topic.belongsTo(subCategory,{foreignKey : "subCategoryId"})
 topic.hasMany(subCategory_topic,{foreignKey : "topicId"})
 subCategory_topic.belongsTo(topic,{foreignKey : "topicId"})
 
-topic.hasMany(courseTopic,{foreignKey : "topicId"})
-courseTopic.belongsTo(topic,{foreignKey : "topicId"})
 
-courses.hasMany(courseTopic,{foreignKey : "courseId"})
-courseTopic.belongsTo(courses,{foreignKey : "courseId"})
-
+topic.hasMany(courses,{foreignKey : "topicId"})
+courses.belongsTo(topic,{foreignKey : "topicId"})
 
 
 courses.hasOne(courseDetails, { foreignKey: "courseId" });
@@ -66,7 +62,6 @@ module.exports = {
   topic,
   subCategory_topic,
   courses,
-  courseTopic,
   courseDetails,
   comments,
   purchase,

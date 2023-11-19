@@ -1,7 +1,7 @@
 version: "3.8"
 services:
-  nodejs-container:
-    container_name: server-blog
+  cybercourse-container:
+    container_name: cybercourse
     build: 
       context: .
       dockerfile: ./dockerfile

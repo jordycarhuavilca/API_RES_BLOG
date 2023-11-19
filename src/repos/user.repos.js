@@ -1,6 +1,7 @@
 const { userState } = require("../utils/states");
 const course = require("../database/models/course");
 const userCourse = require("../database/models/userCourse");
+const comments = require("../database/models/comments");
 class userRepos {
   constructor(user) {
     this.user = user;
@@ -16,15 +17,28 @@ class userRepos {
     });
   }
   async getIntructorCourses(userId) {
-    return await this.user.findAll({
-      where: {
-        userId: userId,
-      },
-      include: {
-        model: course,
+    try {
+      return await course.findAll({
+        where: {
+          userId: userId,
+        },
         attributes: { exclude: ["createdAt", "deletedAt"] },
-      },
-    });
+        include: [
+          {
+            model : require('../database/models/user'),
+            attributes: ["userId", "image","nameUser","family_name"] ,
+          },
+          {
+            model : comments
+          },
+          {
+            model : userCourse
+          }
+        ],
+      });
+    } catch (error) {
+      throw new Error(error) 
+    }
   }
   async myCourses(userId) {
     return await userCourse.findAll({

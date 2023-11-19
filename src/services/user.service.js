@@ -20,14 +20,13 @@ class user_service {
     return sendResponse(constant.success, data);
   }
   async getIntructorCourses(userId) {
-    const data = await this.user.getIntructorCourses(userId);
-
-    if (!data || data.length == 0){
-      return constant.recordNotFound;
-    } else{
-      const {courses}= data[0]
-      const selectedData = courses.filter((course)=>course.state !== courseState[2] && course.state !== courseState[3])
-      return sendResponse(constant.success, selectedData);
+    try {
+      const data = await this.user.getIntructorCourses(userId);
+      if (data.length == 0)return constant.recordNotFound;
+        const selectedData = data.filter((course)=>course.state !== courseState[2] && course.state !== courseState[3])
+        return sendResponse(constant.success, selectedData);
+    } catch (error) {
+      throw new Error(error) 
     }
   }
   async myCourses(userId) {

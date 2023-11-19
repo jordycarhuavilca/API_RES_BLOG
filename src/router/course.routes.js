@@ -10,11 +10,10 @@ route.post("/edit-photo/:courseId", upload.single("image"), course.updateCourseI
 route.get("/info/:courseId?", course.getCourse);
 
 route.get("/topic/:topicName",course.getCoursesByTopic);
-route.get("/options/:category/:subCategory?",course.getCategoryAndSubs);
+route.get("/options/:category/:subCategory?",course.getCourseByCateAndSubs);
 
 route.get("/search", course.buscarCurso);
 route.get("/category", course.listCategoryAndSubs);
-
 
 route.delete("/:courseId", course.deleteCourse);
 route.put("/:courseId", course.updateCourse);

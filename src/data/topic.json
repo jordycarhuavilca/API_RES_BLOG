@@ -61,7 +61,7 @@
     }
     ,
     {
-        "description" : "html"
+        "description" : "HTML5"
     }
     ,
     {
@@ -69,5 +69,14 @@
     },
     {
         "description" : "Amazon AWS"
+    },
+    {
+        "description" : "Desarrollo web de pila completa"
+    },
+    {
+        "description" : "Spring Security"
+    },
+    {
+        "description" : "Microsoft Word"
     }
 ]

@@ -22,5 +22,9 @@
     {
         "description" : "Certificaciones de informática",
         "categoryId" : 3
+    },
+    {
+        "description" : "Informática y software, otros",
+        "categoryId" : 3
     }
 ]
