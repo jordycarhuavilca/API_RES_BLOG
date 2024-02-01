@@ -5,4 +5,6 @@ customResourceResponse.reqCreated = { statusCode: 201, message: 'Record has been
 customResourceResponse.recordNotFound = { statusCode: 404, message: 'No record found.' };
 customResourceResponse.serverError = { statusCode: 500, message: 'Internal server error.' };
 customResourceResponse.reqValidationError = { statusCode: 422, message: 'Data validation failed.' };
+customResourceResponse.unauthorized = { statusCode: 401, message: 'Unauthorized.' };
+customResourceResponse.temporaryRedirect = { statusCode: 322, message: 'temporary redirect' };
 module.exports = customResourceResponse;

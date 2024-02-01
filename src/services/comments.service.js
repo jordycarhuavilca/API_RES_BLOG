@@ -1,35 +1,19 @@
-const constant = require("../utils/constant");
-const { isEmpty } = require("../helpers/validate");
-const { sendResponse } = require("../utils/CustomResponse");
 class comment_Service {
   constructor(comment) {
     this.comment = comment;
   }
-  async addComment(comment) {
-    if (typeof comment !== 'object') throw Error("it's not an object")
-    let validate = isEmpty(Object.values(comment));
-    try {
-      //si courseId o userId no existe, entonces lanzara un error 
-      isEmpty(comment.courseId)
-      isEmpty(comment.userId)
-    } catch (error) {
-      return sendResponse(constant.reqValidationError);
-    }
-    if (validate) return sendResponse(constant.reqValidationError);
+  async addComment(comment,courseId) {
+    comment.courseId = courseId
     const data = await this.comment.addComment(comment);
-    return sendResponse(constant.reqCreated, data);
+    return data
   }
   async getlistComments(courseId) {
     const data = await this.comment.getlistComments(courseId);
-    if (!data || data.length === 0) return constant.recordNotFound;
-    return sendResponse(constant.success, data);
+    return data
   }
   async updateComment(comment, commentId) {
-    if (typeof comment !== 'object') throw Error("it's not an object")
-    let validate = isEmpty(Object.values(comment));
-    if (validate) return sendResponse(constant.reqValidationError);
     const data = await this.comment.updateComment(comment, commentId);
-    return sendResponse(constant.success, data);
+    return data
   }
 }
 

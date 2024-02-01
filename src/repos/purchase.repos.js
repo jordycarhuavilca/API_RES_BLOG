@@ -61,10 +61,10 @@ class purchaseRepos {
   async addToFavorite(userIdCourseId) {
     return await favoritesCourse.create(userIdCourseId);
   }
-  async deleteFromFavorite(favoritosId) {
+  async deleteFromFavorite(courseId) {
     return await favoritesCourse.destroy({
       where : {
-        favoritosId :favoritosId
+        courseId :courseId
       }
     });
   }

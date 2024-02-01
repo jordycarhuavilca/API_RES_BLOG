@@ -1,6 +1,5 @@
 const model = require("../database/models/student.js");
-const { serverError } = require("../utils/constant.js");
-const { response } = require("../utils/CustomResponse.js");
+const constant = require("../utils/constant.js");
 const { studentRepos } = require("../repos/students.repos.js");
 const { student_service } = require("../services/students.service.js");
 
@@ -9,28 +8,53 @@ const studentService = new student_service(studentRepository);
 
 const addStudent = async (req, res) => {
   try {
-    const data = await studentService.addStudent(req.body);
-    return response(data, res);
+    const student = req.body
+    if (typeof student !== 'object'
+    || !student) 
+    return res.status(constant.reqValidationError.statusCode)
+    .json({message : constant.reqValidationError.message})
+
+
+    const data = await studentService.addStudent(student);
+
+    return res.status(constant.reqCreated.statusCode)
+    .json({message : constant.reqCreated.message ,data : data})
+
   } catch (error) {
-    return response(serverError);
+
+    return res.status(error.statusCode)
+    .json({message : error.message})
+
   }
 };
 
 const getStudent = async (req, res) => {
   try {
     const data = await studentService.getStudent(req.params.studentId);
-    return response(data, res);
+    
+    return res.status(constant.success.statusCode)
+    .json({message : constant.success.message ,data : data})
+    
   } catch (error) {
-    return response(serverError);
+    
+    return res.status(error.statusCode)
+    .json({message : error.message})
+
   }
 };
 
 const getStudentCourses = async (req, res) => {
   try {
     const data = await studentService.getStudentCourses(req.params.studentId);
-    return response(data, res);
+    
+    return res.status(constant.success.statusCode)
+    .json({message : constant.success.message ,data : data})
+
   } catch (error) {
-    return response(serverError);
+
+    return res.status(error.statusCode)
+    .json({message : error.message})
+
   }
 };
 
@@ -40,9 +64,14 @@ const updateStudent = async (req, res) => {
       req.body,
       req.params.courseId
     );
-    return response(data, res);
+
+    return res.status(constant.success.statusCode)
+    .json({message : constant.success.message ,data : data})
+
   } catch (error) {
-    return response(serverError);
+
+    return res.status(error.statusCode)
+    .json({message : error.message})
   }
 };
 
@@ -54,18 +83,28 @@ const updateStudentImage = async (req, res) => {
       img,
       req.params.courseId
     );
-    return response(data, res);
+
+    return res.status(constant.success.statusCode)
+    .json({message : constant.success.message ,data : data})
+
   } catch (error) {
-    return response(serverError);
+
+    return res.status(error.statusCode)
+    .json({message : error.message})
   }
 };
 
 const deleteStudent = async (req, res) => {
   try {
     const data = await studentService.deleteStudent(req.params.studentId);
-    return response(data, res);
+   
+    return res.status(constant.success.statusCode)
+    .json({message : constant.success.message ,data : data})
+
   } catch (error) {
-    return response(serverError);
+
+    return res.status(error.statusCode)
+    .json({message : error.message})
   }
 };
 module.exports = {

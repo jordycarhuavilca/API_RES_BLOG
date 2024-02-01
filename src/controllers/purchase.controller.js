@@ -1,5 +1,5 @@
 const model = require("../database/models/purchase.js");
-const { serverError } = require("../utils/constant.js");
+const constant = require("../utils/constant.js");
 const { response } = require("../utils/CustomResponse.js");
 const { purchaseRepos } = require("../repos/purchase.repos.js");
 const { purchase_service } = require("../services/purchase.service.js");
@@ -37,19 +37,20 @@ const addPurchase = async (req, res) => {
         await userService.addUserCourse(newList,t);
         return a
       });
-    return response(data, res);
-  } catch (error) {
-    serverError.message = error;
-    return response(serverError, res);
-  }
+      return res.status(constant.reqCreated.statusCode)
+      .json({message :constant.reqCreated.message, data : data })
+    } catch (error) {
+      return res.status(error.statusCode).json({message : error.message })
+    }
 };
 const getAllPurchase = async (req,res) =>{
   try {
     const data = await purchaseService.getAllPurchase()
-    return response(data, res);
+    return res.status(constant.success.statusCode)
+    .json({message :constant.success.message, data : data })
+
   } catch (error) {
-    serverError.message = error;
-    return response(serverError, res);
+    return res.status(error.statusCode).json({message : error.message })
   }
 }
 
@@ -57,59 +58,64 @@ const getAllPurchase = async (req,res) =>{
 const addToCarrito = async (req,res) =>{
   try {
     const data = await purchaseService.addToCarrito(req.body)
-    return response(data, res);
+    return res.status(constant.reqCreated.statusCode)
+    .json({message :constant.reqCreated.message, data : data })
+
   } catch (error) {
-    serverError.message = error;
-    return response(serverError, res);
+    return res.status(error.statusCode).json({message : error.message })
   }
 }
 
 const deleteFromCarrito = async (req,res) =>{
   try {
     const data = await purchaseService.deleteFromCarrito(req.params.carritoCod)
-    return response(data, res);
+    return res.status(constant.success.statusCode)
+    .json({message :constant.success.message, data : data })
   } catch (error) {
-    serverError.message = error;
-    return response(serverError, res);
+    return res.status(error.statusCode).json({message : error.message })
+
   }
 }
 
 const getAllCourseCarrito = async (req,res) =>{
   try {
     const data = await purchaseService.getAllCourseCarrito(req.params.userId)
-    return response(data, res);
+    return res.status(constant.success.statusCode)
+    .json({message :constant.success.message, data : data })
   } catch (error) {
-    serverError.message = error;
-    return response(serverError, res);
+    return res.status(error.statusCode).json({message : error.message })
   }
 }
 
 const addToFavorite = async (req,res) =>{
   try {
-    const data = await purchaseService.addToFavorite(req.body)
-    return response(data, res);
+    let favCourse = req.body
+    const data = await purchaseService.addToFavorite(favCourse)
+    return res.status(constant.reqCreated.statusCode)
+    .json({message :constant.reqCreated.message , data : data })
   } catch (error) {
-    serverError.message = error;
-    return response(serverError, res);
+    console.error(error.message)
+    return res.status(error.statusCode).json({message : error.message })
   }
 }
 const deleteFromFavorite = async (req,res) =>{
   try {
-    const data = await purchaseService.deleteFromFavorite(req.params.favoritosId)
-    return response(data, res);
+    const data = await purchaseService.deleteFromFavorite(req.params.courseId)
+    return res.status(constant.success.statusCode)
+    .json({message :constant.success.message , data : data })
   } catch (error) {
-    serverError.message = error;
-    return response(serverError, res);
+    return res.status(error.statusCode).json({message : error.message })
   }
 }
 
 const getCourseFavorite = async (req,res) =>{
   try {
     const data = await purchaseService.getCourseFavorite(req.params.userId)
-    return response(data, res);
+    return res.status(constant.success.statusCode)
+    .json({message :constant.success.message , data : data })
   } catch (error) {
-    serverError.message = error;
-    return response(serverError, res);
+    return res.status(error.statusCode).json({message : error.message })
+
   }
 }
 

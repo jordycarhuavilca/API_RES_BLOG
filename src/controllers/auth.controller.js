@@ -1,11 +1,12 @@
 const { OAuth2Client } = require("google-auth-library");
+
 const model = require("../database/models/user");
 const { userRepos } = require("../repos/user.repos");
 const { user_service } = require("../services/user.service");
 const userRepository = new userRepos(model);
 const userService = new user_service(userRepository);
-const { encrypt } = require("../lib/encrypt");
-const { serverError } = require("../utils/constant.js");
+const authHelper = require('../helpers/authHelper.js')
+const constant = require('../utils/constant.js')
 
 const redirectURL = `http://localhost:${process.env["NODE_PORT1"]}/auth/google/callback`;
 const oAuth2Client = new OAuth2Client(
@@ -13,46 +14,6 @@ const oAuth2Client = new OAuth2Client(
   process.env["GOOGLE_CLIENT_SECRET"],
   redirectURL
 );
-
-// const getTokenAgain = (userId) => {
-//   const user = (await = userService.getUser(userId));
-//   const { refreshToken } = user.data;
-//   console.log("refreshToken " + refreshToken);
-//   oAuth2Client.setCredentials({ refresh_token: refreshToken });
-//   const accessToken = oAuth2Client.getAccessToken();
-//   console.log("accessToken " + accessToken);
-// };
-
-const addUser = (payload) => {
-  let hash = encrypt(payload.refresh_token);
-  const { content, iv } = hash;
-  refresh_tokenCrypted = `${iv},${content}`;
-  const user = {
-    userId: payload.sub,
-    user: payload.email,
-    nameUser: payload.given_name,
-    family_name: payload.family_name,
-    refreshToken: refresh_tokenCrypted,
-    image: payload.picture,
-  };
-
-  userService.addUser(user);
-};
-const updateUser = (payload)=>{
-  let hash = encrypt(payload.refresh_token);
-  const { content, iv } = hash;
-  refresh_tokenCrypted = `${iv},${content}`;
-  const user = {
-    userId: payload.sub,
-    user: payload.email,
-    nameUser: payload.given_name,
-    family_name: payload.family_name,
-    refreshToken: refresh_tokenCrypted,
-    image: payload.picture,
-  };
-
-  userService.updateUser(user,payload.sub);
-}
 
 const generateAuthUrl = (req, res) => {
   // Generate the url that will be used for the consent dialog.
@@ -65,48 +26,64 @@ const generateAuthUrl = (req, res) => {
   res.redirect(authorizeUrl);
 };
 
-const getToken = async (req, res) => {
-  
-  const code = req.query.code;
+const setCredentials  = async (req, res) => {
   try {
+    const code = req.query.code;
 
+    const tokens = await authHelper.getToken(oAuth2Client,code)
+    
+    const payload = await authHelper.getPayload(oAuth2Client,tokens.id_token)
+    
+    const userId = payload.sub
+    const refresh_token = tokens.refresh_token
+    
+    const user = await userService.getUser(userId);
+    if (user.length == 0) await userService.addUser(payload,refresh_token);
+    else await userService.updateUser(payload,userId,refresh_token)
 
-    const { tokens } = await oAuth2Client.getToken(code);
-
-    const info = await oAuth2Client.verifyIdToken({
-      idToken: tokens.id_token,
-      audience: process.env["GOOGLE_CLIENT_ID"],
-    });
-
-    if (info) {
-      const { payload } = info;
-      payload.refresh_token = tokens.refresh_token;
-
-      const user = await userService.getUser(payload.sub);
-      if (!user.data) addUser(payload);
-      else updateUser(payload)
-
-      res.cookie("accessToken", tokens.id_token, {
-        httpOnly: true,
-      });
-      
-      const redirectUrl = new URL("http://localhost:5173/");
-      Object.entries(payload).forEach(([key, value]) => {
-        redirectUrl.searchParams.append(key, value);
-      });
-      res.redirect(303, redirectUrl.toString());
-
-      // res.redirect(303, "http://localhost:5173/");
-    } else {
-      res.redirect(403, "http://localhost:5173/");
+    const clientPayload = {
+      sub : payload.sub,
+      email : payload.email,
+      name : payload.name,
+      picture : payload.picture
     }
+
+    authHelper.setSchToGetNewToken(oAuth2Client,user,tokens.expiry_date)
+
+    req.session.user = tokens
+
+    res.cookie("token", tokens.id_token, {
+      httpOnly: true,
+    });
+    res.cookie("payload",clientPayload);
+    res.redirect(303,process.env.BASEURL);
+
   } catch (err) {
-    res.redirect(serverError.statusCode, "http://localhost:5173/");
-    console.log("Error logging in with OAuth2 user", err);
+    console.log("Error logging in with OAuth2 user", err.message);
+    res.redirect("http://localhost:5173/");
   }
 };
 
+const logout = (req,res)=>{
+
+  res.clearCookie("token")
+  res.clearCookie("payload")
+
+  req.session.destroy((err) => {
+    if (err) {
+      console.log(err.message)
+      const {message,statusCode} = constant.serverError
+      res.status(statusCode).json({message : message})
+    } else {
+      const {message,statusCode} = constant.success
+      res.status(statusCode).json({message : message})
+    }
+  });
+  console.log("session2 " +JSON.stringify(req.session))
+}
+
 module.exports = {
   generateAuthUrl,
-  getToken,
+  setCredentials,
+  logout
 };

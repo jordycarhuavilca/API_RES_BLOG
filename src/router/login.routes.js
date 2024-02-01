@@ -1,15 +1,19 @@
 const { Router } = require("express");
 const route = Router();
 const authController = require("../controllers/auth.controller");
-
-
+const constant = require('../utils/constant.js')
 
 route.get("/google", authController.generateAuthUrl);
+route.get("/google/callback",(req,res,next)=>{
+    const errorUrl = req.query.error
+    if (errorUrl) {
+       return res.redirect('http://localhost:5173/')
+    }
+    else next()
 
-route.get("/login", (req, res) => {
-  res.status(500).json({ message: "error internal server" });
-});
+}, authController.setCredentials);
 
-route.get("/google/callback", authController.getToken);
+
+route.post("/logout", authController.logout);
 
 module.exports = route;

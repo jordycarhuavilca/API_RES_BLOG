@@ -15,11 +15,50 @@ class courseRepos {
   async addCourse(course) {
     return await this.course.create(course);
   }
-  async getCourse(courseId) {
-    let condicion = {};
-    if (courseId) condicion.courseId = courseId;
+
+  async listCourses(){
     return await this.course.findAll({
-      where: condicion,
+      attributes: { exclude: ["deletedAt", "createdAt","userId"] },
+      include: [
+        {
+          model: courseDetails,
+          attributes: { exclude: ["courseDetailsId","courseId"] },
+        },
+        {
+          model: comment,
+          include : {
+            model : user,
+            attributes: ['image','nameUser', 'family_name'],
+          }
+        },
+        {
+          model: user,
+          attributes: ['userId','image','nameUser', 'family_name'],
+        },
+        {
+          model: topic,
+          include : {
+            model : subCategory_topic,
+            attributes: { exclude: ['topicId','subCategoryId'] },
+              include : {
+                model : subCategory,
+                  attributes: { exclude: ['categoryId','subCategoryId'] },
+                  include : {
+                    model : category,
+                    attributes: { exclude: ['categoryId'] },
+                }
+              }
+            }
+        },
+      ],
+    });
+  }
+  async getCourse(courseId) {
+
+    return await this.course.findAll({
+      where: {
+        courseId : courseId
+      },
       attributes: { exclude: ["deletedAt", "createdAt","userId"] },
       include: [
         {

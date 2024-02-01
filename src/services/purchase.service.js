@@ -1,8 +1,6 @@
 const constant = require("../utils/constant");
-const { isEmpty } = require("../helpers/validate");
-const { sendResponse } = require("../utils/CustomResponse");
-
-
+const errorHandler = require('../helpers/errorHandler')
+const validate = require('../helpers/validate')
 
 class purchase_service {
   constructor(purchase) {
@@ -10,64 +8,78 @@ class purchase_service {
   }
   async getNextPurchaseId(){
     const data = await this.purchase.getNextPurchaseId()
-    if (!data) return constant.recordNotFound;
-    return sendResponse(constant.success, data);
+    if (!data) {
+      const {message,statusCode} = constant.recordNotFound
+      throw new errorHandler.NotFoundError(message,statusCode)
+    }     
+    return data
   }
   async addPurchase(purchase,transaction) {
     try {
-      if (typeof purchase !== 'object') throw Error("it's not an object")
-      let validate = isEmpty(Object.values(purchase));
-      if (validate) return constant.reqValidationError;
       const data = await this.purchase.addPurchase(purchase, transaction);
-      return sendResponse(constant.reqCreated, data);
-
+      return data
     } catch (error) {
-      console.log(error)
-      return constant.reqValidationError;
+      const {message,statusCode} = constant.serverError
+      throw new errorHandler.InternalServerError(message,statusCode)
     }
   }
   async addPurchaseDetail(list,transaction){
-    if (!Array.isArray(list)) throw Error("it's not list")
     const data = await this.purchase.addPurchaseDetail(list,transaction);
-    return sendResponse(constant.reqCreated, data);  
+    return data
   }
 
   async getAllPurchase() {
     const data = await this.purchase.getAllPurchase();
-    if (!data) return constant.recordNotFound;
-    return sendResponse(constant.success, data);
+    
+    return data
   }
 
   async addToCarrito(userIdCourseId) {
     const data = await this.purchase.addToCarrito(userIdCourseId);
-    if (!data) return constant.recordNotFound;
-    return sendResponse(constant.success, data);
+    return data
   }
 
   async deleteFromCarrito(carritoCod) {
     const data = await this.purchase.deleteFromCarrito(carritoCod);
-    if (!data) return constant.recordNotFound;
-    return sendResponse(constant.success, data);
+    return data
   }
   async getAllCourseCarrito(userId) {
     const data = await this.purchase.getAllCourseCarrito(userId);
-    if (!data) return constant.recordNotFound;
-    return sendResponse(constant.success, data);
+  
+    return data
   }
   async addToFavorite(userIdCourseId) {
-    const data = await this.purchase.addToFavorite(userIdCourseId);
-    if (!data) return constant.recordNotFound;
-    return sendResponse(constant.success, data);
+    const {userId , courseId} = userIdCourseId
+    const listCourse = await this.purchase.getCourseFavorite(userId)
+    let data = {}
+    if (listCourse.length == 0){
+      data = await this.purchase.addToFavorite(userIdCourseId);
+      return data
+    }
+
+    if (listCourse.length == 1) {
+      const data = listCourse[0].courseId == courseId?
+       await this.purchase.deleteFromFavorite(courseId)
+      : await this.purchase.addToFavorite(userIdCourseId);
+      return data
+    }
+
+    if(validate.isEqual(listCourse,courseId,"courseId")) {
+      return await this.purchase.deleteFromFavorite(courseId)
+    }else{
+      return await this.purchase.addToFavorite(userIdCourseId);
+    }
   }
-  async deleteFromFavorite(favoritosId) {
-    const data = await this.purchase.deleteFromFavorite(favoritosId);
-    if (!data) return constant.recordNotFound;
-    return sendResponse(constant.success, data);
+  async deleteFromFavorite(courseId) {
+    const data = await this.purchase.deleteFromFavorite(courseId);
+
+    return data
   }
   async getCourseFavorite(userId) {
     const data = await this.purchase.getCourseFavorite(userId);
-    if (!data) return constant.recordNotFound;
-    return sendResponse(constant.success, data);
+    
+
+    return data
   }
 
 

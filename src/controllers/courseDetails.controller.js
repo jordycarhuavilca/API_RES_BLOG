@@ -1,6 +1,5 @@
 const model = require("../database/models/courseDetails.js");
-const { serverError } = require("../utils/constant.js");
-const { response } = require("../utils/CustomResponse.js");
+const constant = require("../utils/constant.js");
 const { courseDetailsRepos } = require("../repos/courseDetails.repos.js");
 const {
   courseDetails_service,
@@ -11,53 +10,47 @@ const courseDetailsService = new courseDetails_service(courseDetailsRepository);
 
 const addCourseDetails = async (req, res) => {
   try {
-    const {
-      hours,
-      numExercise,
-      articulos,
-      recursosDescargable,
-      certificacion,
-    } = req.body;
+    const courseDetails = req.body
 
-    const courseDetails = {
-      hours,
-      numExercise,
-      articulos,
-      recursosDescargable,
-      certificacion,
-    };
+    if (typeof courseDetails !== 'object'
+    || !courseDetails) 
+    return res.status(constant.reqValidationError.statusCode)
+    .json({message : constant.reqValidationError.message})
+
     const data = await courseDetailsService.addCourseDetails(courseDetails);
-    return response(data, res);
+
+     return res.status(constant.reqCreated.statusCode)
+    .json({message : constant.reqCreated.message ,data : data})
   } catch (error) {
-    serverError.message = error
-    return response(serverError,res);  }
-};
+
+    return res.status(error.statusCode)
+    .json({message : error.message })
+  }
+}
 
 const updateCourseDetails = async (req, res) => {
   try {
-    const {
-      hours,
-      numExercise,
-      articulos,
-      recursosDescargable,
-      certificacion,
-    } = req.body;
+    const courseDetails =req.body;
+    const courseId =  req.params.courseId
 
-    const courseDetails = {
-      hours,
-      numExercise,
-      articulos,
-      recursosDescargable,
-      certificacion,
-    };
+    if (typeof courseDetails !== 'object'
+    || !courseId) 
+    res.status(constant.reqValidationError.statusCode)
+    .json({message : constant.reqValidationError.message})
+
     const data = await courseDetailsService.updateCourseDetails(
       courseDetails,
-      req.params.courseId
+      courseId
     );
-    return response(data, res);
+
+    return res.status(constant.success.statusCode)
+    .json({message : constant.success.message ,data : data})
+  
   } catch (error) {
-    serverError.message = error
-    return response(serverError,res);  }
+
+    return res.status(error.statusCode)
+    .json({message : error.message })
+  }
 };
 module.exports = {
   addCourseDetails,

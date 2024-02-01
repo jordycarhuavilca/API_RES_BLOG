@@ -2,7 +2,7 @@ const { DataTypes } = require("sequelize");
 const sequelize = require("../DB_connect");
 
 const carrito = sequelize.define(
-  "carrito",
+  "carritos",
   {
     carritoCod: {
       type: DataTypes.INTEGER,

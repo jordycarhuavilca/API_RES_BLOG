@@ -29,11 +29,12 @@ async function startApp() {
     await sequelize.sync({force : true})
     console.log('Tables created successfully')
     await insertData()
+    runServer()
     // console.log('Data was inserted Successfully')
   } catch (error) {
-    console.error("error in database : ", error);
+    console.error("error in database : ", error.message);
   }
-  runServer()
+  
 }
 
 startApp();

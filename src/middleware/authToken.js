@@ -1,29 +1,29 @@
-const { OAuth2Client } = require("google-auth-library");
-const client = new OAuth2Client();
-const { reqValidationError } = require("../utils/constant");
-const googleVerifyToken = async (req, res, next) => {
-  let token = req.cookies.accessToken;
+const constant= require("../utils/constant");
+const authHelper = require('../helpers/authHelper');
+
+
+const verifyToken = async (req, res, next) => {
   try {
-    const ticket = await client.verifyIdToken({
-      idToken: token,
-      audience: process.env["GOOGLE_CLIENT_ID"],
-    });
-    const payload = ticket.getPayload();
-    const userid = payload["sub"];
-    if (payload) {
-      next();
-    } else {
-      return res
-        .status(reqValidationError.statusCode)
-        .json({ message: reqValidationError.message });
+    let token = req.cookies.token;
+    
+    const userSession = req.session.user
+
+    if (userSession.id_token != token)  return res
+    .status(constant.unauthorized.statusCode)
+    .json({ message: constant.unauthorized.message});
+
+    const response = await authHelper.verifyAccessToken(userSession.access_token)
+
+    if (response.email_verified) {
+      next()
     }
+
   } catch (err) {
+    console.log(err.message)
     return res
-      .status(reqValidationError.statusCode)
-      .json({ message: reqValidationError.message });
+      .status(constant.unauthorized.statusCode)
+      .json({ message: constant.unauthorized.message });
   }
 };
 
-module.exports = {
-  googleVerifyToken,
-};
+module.exports = verifyToken

@@ -1,73 +1,103 @@
 const constant = require("../utils/constant");
-const {courseState} = require("../utils/states");
-const { isEmpty } = require("../helpers/validate");
-const { sendResponse } = require("../utils/CustomResponse");
-
+const errorHandler = require('../helpers/errorHandler')
+const handleOrmErrs = require('../helpers/handleOrmErrs')
+const sequelize = require('sequelize')
+const states = require('../utils/states');
+const validate = require("../helpers/validate");
 class course_service {
   constructor(course) {
     this.course = course;
   }
   
   async addCourse(course) {
-    if (typeof course !== 'object') throw Error("it's not an object")
-    let validate = isEmpty(Object.values(course));
-    if (validate) return constant.reqValidationError;
-    const data = await this.course.addCourse(course);
-    return sendResponse(constant.reqCreated, data);
+    try {
+      const data = await handleOrmErrs.handleErr(this.course.addCourse(course),sequelize.Error)
+      return data 
+      
+    } catch (error) {
+      
+      if (error.statusCode) throw new errorHandler.ValidateError(error.message,error.statusCode)
+      throw new errorHandler.InternalServerError(constant.serverError.message,500)
+
+    }
   }
 
+  async listCourses(){
+    return await this.course.listCourses()
+  }
+
+
   async getCourse(courseId) {
-    const data = await this.course.getCourse(courseId);
-    if (!data || data.length == 0) return constant.recordNotFound;
-    return sendResponse(constant.success, data);
+      const data = await handleOrmErrs.handleErr(this.course.getCourse(courseId),sequelize.Error);
+      if (validate.isEmpty(data)) return []
+      if (data[0].state == states.courseState[3]) {
+        return []
+      }
+      return data
   }
   
   async getCoursesByTopic(topicName) {
-    const data = await this.course.getCoursesByTopic(topicName);
-    if (!data || data.length == 0) return constant.recordNotFound;
-    return sendResponse(constant.success, data);
+   
+      const data = await  handleOrmErrs.handleErr(this.course.getCoursesByTopic(topicName),sequelize.Error);
+      return data
+    
   }
 
   async updateCourse(updatedCourse, courseId) {
-    if (typeof updatedCourse !== 'object') throw Error("it's not an object")
-    let validate = isEmpty(Object.values(updatedCourse));
-    if (validate) return constant.reqValidationError;
-    const data = await this.course.updateCourse(updatedCourse, courseId);
-    return sendResponse(constant.success, data);
+    try {
+      const data = await  handleOrmErrs.handleErr(this.course.updateCourse(updatedCourse, courseId),sequelize.Error);
+      return data
+    } catch (error) {
+
+      if (error.statusCode) throw new errorHandler.ValidateError(error.message,error.statusCode)
+      throw new errorHandler.InternalServerError(constant.serverError.message,500)
+
+    }
   }
 
   async getTotalStudents() {
-    const data = await this.course.getTotalStudents();
-    if (!data || data.length == 0) return constant.recordNotFound;
-    return sendResponse(constant.success, data);
+    const data = await  handleOrmErrs.handleErr(this.course.getTotalStudents(),sequelize.Error);
+    return data
   }
-  async updateCourseImage(image, courseId) {
-    if (typeof image !== 'object') throw Error("it's not an object")
-    let validate = isEmpty(Object.values(image));
-    if (validate) return constant.reqValidationError;
-    const data = await this.course.updateCourseImage(image, courseId);
-    return sendResponse(constant.success,data)
+  async updateCourseImage(nameImg, courseId) {
+    try {
+      const course = {image : nameImg}
+      const data = await  handleOrmErrs.handleErr(this.course.updateCourseImage(course, courseId),sequelize.Error);
+      console.log("data "+JSON.stringify(data))
+      return data
+    
+    } catch (error) {
+      
+      if (error.statusCode) throw new errorHandler.ValidateError(error.message,error.statusCode)
+      throw new errorHandler.InternalServerError(constant.serverError.message,500)
+
+    }
   }
   async deleteCourse(courseId) {
-    const data = await this.course.deleteCourse(courseId);
-    if(data[0]=== 0)return constant.recordNotFound;
-    return sendResponse(constant.success, data);
+    try{
+
+      const data = await  handleOrmErrs.handleErr(this.course.deleteCourse(courseId),sequelize.Error);
+      
+      return data
+    
+    } catch (error) {
+      
+      if (error.statusCode) throw new errorHandler.ValidateError(error.message,error.statusCode)
+      throw new errorHandler.InternalServerError(constant.serverError.message,500)
+
+    }
   }
   async buscarCurso(courseName) {
-    let validate = isEmpty(courseName);
-    if (validate) return constant.reqValidationError;
-    const data = await this.course.buscarCurso(courseName);
-    return sendResponse(constant.success,data)
+    const data = await  handleOrmErrs.handleErr(this.course.buscarCurso(courseName),sequelize.Error);
+    return data
   }
   async listCategoryAndSubs(){
-    const data = await this.course.listCategoryAndSubs();
-    if (!data || data.length == 0) return constant.recordNotFound;
-    return sendResponse(constant.success, data);
+    const data = await  handleOrmErrs.handleErr(this.course.listCategoryAndSubs(),sequelize.Error);
+    return data
   }
   async getCourseByCateAndSubs(categoryValue,subCategoryValue){
-    const data = await this.course.getCourseByCateAndSubs(categoryValue,subCategoryValue);
-    if (!data || data.length == 0) return constant.recordNotFound;
-    return sendResponse(constant.success, data);
+    const data = await  handleOrmErrs.handleErr(this.course.getCourseByCateAndSubs(categoryValue,subCategoryValue),sequelize.Error);
+    return data
   }
 }
 

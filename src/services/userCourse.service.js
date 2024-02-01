@@ -1,18 +1,15 @@
-const constant = require("../utils/constant");
-const { isEmpty } = require("../helpers/validate");
-const { sendResponse } = require("../utils/CustomResponse");
+
 class userCourse_Service {
   constructor(userCourse) {
     this.userCourse = userCourse;
   }
   async addUserCourse(userCourse,transaction) {
-    if (typeof userCourse !== 'object') throw Error("it's not an object")
     const data = await this.userCourse.addUserCourse(userCourse,transaction);
-    return sendResponse(constant.reqCreated, data);
+    return data
   }
   async getUserCourse(){
     const data = await this.userCourse.getUserCourse()
-    return sendResponse(constant.reqCreated, data);
+    return data
   }
 }
 

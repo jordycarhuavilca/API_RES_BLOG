@@ -1,50 +1,36 @@
-const constant = require("../utils/contant");
-const { isEmpty } = require("../helpers/validate");
-const { sendResponse } = require("../utils/CustomResponse");
+const constant = require("../utils/constant");
+const errorHandler = require('../helpers/errorHandler')
+const validate = require('../helpers/validate')
 
 class student_service {
   constructor(student) {
     this.student = student;
   }
   async addStudent(student) {
-    if (typeof student !== 'object') throw Error("it's not an object")
-
-    let isEmpty = isEmpty(Object.values(student));
-    if (isEmpty) return constant.reqValidationError;
     const data = await this.student.addStudent(student);
-    return sendResponse(constant.reqCreated,data)
+    return data
   }
   async getStudent(studentId) {
     const data = await this.student.getStudent(studentId);
-    if (!data) return constant.recordNotFound;
-    return sendResponse(constant.success,data)
+    return data
 
   }
   async getStudentCourses(studentId) {
     const data = await this.student.getStudentCourses(studentId);
-    if (!data) return constant.recordNotFound;
-    return sendResponse(constant.success,data)
-
+    return data
   }
   async updateStudent(updateStudent, studentId) {
-    if (typeof updateStudent !== 'object') throw Error("it's not an object")
-    let isEmpty = isEmpty(Object.values(updateStudent));
-    if (isEmpty) return constant.reqValidationError;
     const data = await this.student.updateStudent(updateStudent, studentId);
-    return sendResponse(constant.success,data)
+    return data
 
   }
   async updateStudentImage(image, studentId) {
-    if (typeof image !== 'object') throw Error("it's not an object")
-    let isEmpty = isEmpty(Object.values(image));
-    if (isEmpty) return constant.reqValidationError;
     const data = await this.student.updateStudentImage(image, studentId);
-    return sendResponse(constant.success,data)
-
+    return data
   }
   async deleteStudent(studentId) {
     const data = await this.student.deleteStudent(studentId);
-    return sendResponse(constant.success,data)
+    return data
   }
 }
 module.exports = {student_service};

@@ -1,7 +1,6 @@
 const userModel = require('../database/models/user')
 const userCourseModel = require('../database/models/userCourse.js')
-const { serverError } = require("../utils/constant.js");
-const { response } = require("../utils/CustomResponse.js");
+const constant = require("../utils/constant.js");
 const { userRepos } = require("../repos/user.repos.js");
 const { user_service } = require("../services/user.service.js");
 const { userCourseRespos } = require("../repos/userCourse.repos.js");
@@ -15,47 +14,63 @@ const userCourseService = new userCourse_Service(userCourseRepository);
 
 const addUser = async (req, res) => {
   try {
-    const data = await userService.addUser(req.body);
-    return response(data, res);
+    const user = req.body
+    const data = await userService.addUser(user);
+
+    return res.status(constant.reqCreated.statusCode)
+    .json({message : constant.reqCreated.message ,data : data})
+
   } catch (error) {
-    serverError.message = error;
-    return response(serverError, res); 
+     return res.status(error.statusCode)
+    .json({message : error.message })
   }
 };
 const getUser = async(req,res) =>{
   try {
     const data = await userService.getUser(req.params.userId);
-    return response(data, res);
+    
+    return res.status(constant.success.statusCode)
+    .json({message : constant.success.message ,data : data})
+
   } catch (error) {
-    serverError.message = error;
-    return response(serverError, res); 
+    return res.status(error.statusCode)
+    .json({message : error.message })
   }
 }
 const getIntructorCourses = async (req, res) => {
   try {
     const data = await userService.getIntructorCourses(req.params.userId);
-    return response(data, res);
+    
+    return res.status(constant.success.statusCode)
+    .json({message : constant.success.message ,data : data})
+
   } catch (error) {
-    serverError.message = error;
-    return response(serverError, res);
+    return res.status(error.statusCode)
+    .json({message : error.message})
   }
 };
 const myCourses = async (req, res) => {
   try {
     const data = await userService.myCourses(req.params.userId);
-    return response(data, res);
+    
+    return res.status(constant.success.statusCode)
+    .json({message : constant.success.message ,data : data})
+
   } catch (error) {
-    serverError.message = error;
-    return response(serverError, res);
+    return res.status(error.statusCode)
+    .json({message : error.message})
   }
 };
 const updateUser = async (req, res) => {
   try {
     const data = await userService.updateUser(req.body, req.params.userId);
-    return response(data, res);
+    
+    return res.status(constant.success.statusCode)
+    .json({message : constant.success.message ,data : data})
+
   } catch (error) {
-    serverError.message = error;
-    return response(serverError, res);
+    return res.status(error.statusCode)
+    .json({message : error.message})
   }
 };
 
@@ -64,30 +79,39 @@ const updateUserImage = async (req, res) => {
     const img = {};
     img.image = req.nameImg;
     const data = await userService.updateUserImage(img, req.params.userId);
-    return response(data, res);
+    
+    return res.status(constant.success.statusCode)
+    .json({message : constant.success.message ,data : data})
+
   } catch (error) {
-    serverError.message = error;
-    return response(serverError, res);
+    return res.status(error.statusCode)
+    .json({message : error.message})
   }
 };
 
 const deleteUser = async (req, res) => {
   try {
     const data = await userService.deleteUser(req.params.userId);
-    return response(data, res);
+    
+    return res.status(constant.success.statusCode)
+    .json({message : constant.success.message ,data : data})
+
   } catch (error) {
-    serverError.message = error;
-    return response(serverError, res);
+    return res.status(error.statusCode)
+    .json({message : error.message})
   }
 };
 
 const getUserCourse  =async (req,res) =>{
   try {
     const data = await userCourseService.getUserCourse();
-    return response(data, res);
+
+    return res.status(constant.success.statusCode)
+    .json({message : constant.success.message ,data : data})
+
   } catch (error) {
-    serverError.message = error;
-    return response(serverError, res);
+    return res.status(error.statusCode)
+    .json({message : error.message});
   } 
 }
 module.exports = {

@@ -7,13 +7,9 @@ const getCurrentPath = (filename, extention) => {
 };
 
 const insertData = async (pathWay, model, nameModel) => {
-  try {
     let dataString = await fs.readFile(pathWay, "utf-8");
-    model.bulkCreate(JSON.parse(dataString));
+    await model.bulkCreate(JSON.parse(dataString));
     console.log(`${nameModel} inserted successfully`);
-  } catch (error) {
-    console.log(`error inserting data ${error}`);
-  }
 };
 
 const insert = async () => {
@@ -45,11 +41,14 @@ const insert = async () => {
     purchaseDetail : listModels.purchaseDetail,
     userCourse : listModels.userCourse
   };
-
-  for (let key in orderModels) {
-    const pathWay = getCurrentPath(listNameData[index], "json");
-    await insertData(pathWay, orderModels[key], listNameData[index]);
-    index++;
+  try {
+    for (let key in orderModels) {
+      const pathWay = getCurrentPath(listNameData[index], "json");
+      await insertData(pathWay, orderModels[key], listNameData[index])
+      index++;
+    }
+  } catch (error) {
+    console.log(error.message)
   }
 };
 module.exports = insert;

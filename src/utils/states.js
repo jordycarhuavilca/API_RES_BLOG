@@ -1,9 +1,7 @@
-const courseState = ['Free','Paid','Suspended','deleted']
-const userType = ['student','instructor']
-const userState = ['active','deleted']
-
-module.exports = {
-    courseState,
-    userType,
-    userState
+const states = {
+    courseState : ['Free','Paid','Suspended','deleted'],
+    userType : ['student','instructor'],
+    userState : ['active','deleted']
 }
+
+module.exports = states
